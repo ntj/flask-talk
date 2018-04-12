@@ -1,0 +1,138 @@
+.reveal {
+    font-family: Verdana, sans-serif !important;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: Verdana, sans-serif;
+}
+
+.reveal .slide-pictures-container {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.reveal .slide-picture {
+    margin-left: 5px;
+    margin-right: 5px;
+    max-height: 80%;
+}
+
+.reveal .slide-picture img {
+    border: none;
+}
+
+.reveal .slide-picture-no-shadow img {
+    border: none;
+    box-shadow: none;
+}
+
+.reveal .slide-pictures-container.few img{
+    max-height: 500px;
+}
+
+.reveal .slide-pictures-container.many img{
+    max-height: 300px;
+}
+
+.reveal .slide-pictures-container.stillmany img{
+    max-height: 230px;
+}
+
+.reveal .slide-pictures-container.manymany img{
+    max-height: 200px;
+}
+
+.reveal .slide-icon {
+    margin: auto;
+    font-size: 160px;
+    color: #efdcbc;
+}
+
+.reveal .image-caption{
+    font-size: small;
+    text-align: right;
+}
+
+.reveal section .slide-pic {
+    border: none;
+}
+
+.reveal .no-bullets {
+    list-style-type: none;
+}
+
+.reveal .talk-wide {
+    margin: 0;
+}
+
+.reveal .highlight-letter {
+    color: #23759b;
+}
+
+.reveal .friendly-urls {
+    list-style-type: none;
+    font-size: 0.8em;
+}
+
+.reveal .friendly-urls li{
+    margin-bottom: 15px;
+}
+
+.reveal .code-block {
+    margin: 0;
+    box-shadow: none;
+}
+
+.reveal .disappear {
+    display: none;
+}
+
+.reveal .predefined {
+    border: solid red 2px;
+}
+
+.reveal .jinja-logo {
+    margin-left: -24em;
+    margin-top: -3em;
+    height: 3em;
+    border: none;
+    box-shadow: none;
+}
+
+.reveal .jinja-logo-big {
+    height: 4em;
+    border: none;
+    box-shadow: none;
+}
+
+.reveal .listing {
+    font-size: 0.9em;
+}
+
+.reveal pre {
+    box-shadow: none;
+    min-width: 50em;
+}
+
+.reveal .mark1 {
+    background-color: #90f190;
+}
+
+.reveal .mark2 {
+    background-color: #b3d1ff;
+}
+
+.reveal .mark3 {
+    background-color: #efb966;
+}
+
+#mvc {
+    padding-bottom: 2em;
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 11em;
+}
