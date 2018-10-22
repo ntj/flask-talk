@@ -1,0 +1,255 @@
+<html>
+<head>
+   <link rel="stylesheet" href="css/reveal.css">
+   <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+   <link rel="stylesheet" href="css/theme/league.css">
+   <link rel="stylesheet" href="css/overrides.css">
+   <title>Flask</title>
+</head>
+<body>
+<div class="reveal">
+   <div class="slides">
+
+      <!------------------------------------------------------
+         Intro
+      ------------------------------------------------------->
+
+     <section data-transition="none">
+         <h2>Shopping with Django</h2>
+        <h4>Viral Tools Web Application</h4>
+     </section>
+
+     <section data-transition="none">
+
+         <h3>Viral App</h3>
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img class="slide-pic" src="img/django/viral3.png" />
+            </div>
+         </div>
+     </section>
+
+     <section data-transition="none">
+         <h3>Viral App</h3>
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img class="slide-pic" src="img/django/viral7.png" />
+            </div>
+         </div>
+     </section>
+
+     <section data-transition="none">
+         <h3>Viral App</h3>
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img class="slide-pic" src="img/django/viral1.png" />
+            </div>
+         </div>
+     </section>
+
+     <section data-transition="none">
+         <h3>Viral App</h3>
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img class="slide-pic" src="img/django/viral2.png" />
+            </div>
+         </div>
+     </section>
+
+     <section>
+         <h3>Stats</h3>
+          <ul>
+            <li>~ 150 Requester</li>
+            <li>~ 400 Orders</li>
+            <li>~ 800 Different Items in the Inventory</li>
+            <li>~ 130 Routes</li>
+          </ul>
+      </section>
+
+     <section>
+       <h3>Current Process</h3>
+          <div class="slide-pictures-container stillmany">
+            <div class="slide-picture">
+               <img class="slide-pic" src="img/django/janelia-org.png" />
+            </div>
+            <div class="slide-picture">
+               <img class="slide-pic" src="img/django/cognito.png" />
+            </div>
+            <div class="slide-picture">
+               <img class="slide-pic" src="img/django/spreadsheet.png" />
+            </div>
+         </div>
+     </section>
+
+     <section>
+       <h3>Current Process</h3>
+          <div class="slide-pictures-container stillmany">
+            <div class="slide-picture">
+               <img class="slide-pic" src="img/django/janelia-org.png" />
+            </div>
+            <div class="slide-picture">
+               <img class="slide-pic" src="img/django/cognito.png" />
+            </div>
+            <div class="slide-picture">
+               <img class="slide-pic" src="img/django/spreadsheet2.png" />
+            </div>
+         </div>
+     </section>
+
+     <section>
+       <h3>Current Process</h3>
+          <div class="slide-pictures-container stillmany">
+            <div class="slide-picture">
+               <img class="slide-pic" src="img/django/janelia-org.png" />
+            </div>
+            <div class="slide-picture">
+               <img class="slide-pic" src="img/django/cognito.png" />
+            </div>
+            <div class="slide-picture">
+               <img class="slide-pic" src="img/django/spreadsheet3.png" />
+            </div>
+         </div>
+     </section>
+
+     <section data-transition="none">
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img class="slide-pic logo" src="img/django/easter-eggs.jpg" />
+            </div>
+         </div>
+      </section>
+
+     <section data-transition="none">
+         <h3>What went wrong?</h3>
+         <ul>
+            <li>Major focus on user interface, not internal logic</li>
+            <li>Views work only with uploaded data</li>
+            <li>Wrong implementation of data manipulation tasks</li>
+         </ul>
+      </section>
+
+     <section data-transition="none"><br/>
+         <h3>Data Manipulation</h3>
+          <ul style="list-style-type: none;">
+            <li><i class="icon-green fa fa-check" aria-hidden="true"></i> User interaction ("Press button")</li>
+            <li><i class="icon-green fa fa-check" aria-hidden="true"></i> Event-based ("Create new record")</li>
+            <li><i class="icon-green fa fa-check" aria-hidden="true"></i> Recurring background job (weekly / nightly)</li><br/>
+            <li><i class="icon-red fa fa-times" aria-hidden="true"></i> Not when opening a view!</li>
+            <a href="https://viraltools.janelia.org/service/prep/10493/">https://viraltools.janelia.org/service/prep/10493/</a>
+            <a href="https://github.com/JaneliaSciComp/VirusServices/blob/1813875d6ec97ba4b706fa60e75a1f99159d7667/service/views.py">github.com/service/views.py</a><br/>
+          </ul>
+      </section>
+
+     <section data-transition="none"><br/>
+         <h3>Data Display vs. View Layer</h3>
+          <ul style="list-style-type: none;">
+            <li>Internal value (stored in database)</li>
+            <li>Display value -- user-friendly, human-readable</li>
+            <code style="font-size: 0.75em;">
+              <pre>
+                DNA_SOURCE = (
+                  ('r', 'Requester'),
+                  ('m', 'Molecular Biology'),
+                  ('v', 'Viral Tools')
+                )
+              </pre>
+            </code>
+            <li><a href="https://github.com/JaneliaSciComp/VirusServices/blob/1813875d6ec97ba4b706fa60e75a1f99159d7667/service/templates/view_prep.html">github.com/view_prep.html</a></li><br/>
+          </ul>
+      </section>
+
+     <section>
+       <h3><i class="icon-green fa fa-check" aria-hidden="true"></i> Fat Models</h3>
+       <p>
+	      <cite>
+          "The idea &mdash; often presented as a common pattern in MVC-style programming &mdash; is to build thick/fat models and thin controllers.<br/>
+          In Django, that translates to thick models with lots and lots of small methods and thin views which use those methods and keep their logic as minimal as possible. There are lots of benefits to this approach."
+        </cite>
+       </p>
+       <span style="font-size: small;"><a href="https://sunscrapers.com/blog/where-to-put-business-logic-django/">https://sunscrapers.com/blog/where-to-put-business-logic-django/</a></span>
+      </section>
+
+     <section>
+       <h3><i class="icon-red fa fa-times" aria-hidden="true"></i> Putting Business Logic in Views/Forms</h3>
+       <p>
+	      <cite>
+          (...) I don't think that putting business logic in forms, views, or serializers is a clean idea. (...)<br/>
+          The main reason for that is the miniscule chance that the form, view, or serializer will ever serve as the only entry point of that particular scenario. (...).<br/>
+          Just don't do that.
+        </cite>
+       </p>
+       <span style="font-size: small;"><a href="https://sunscrapers.com/blog/where-to-put-business-logic-django/">https://sunscrapers.com/blog/where-to-put-business-logic-django/</a></span>
+      </section>
+
+      <section data-transition="none">
+         <h3>Django Signals</h3>
+          <ul>
+            <li>Event-based ("create a new record")</li>
+            <li>Sender / Receiver Principle </li>
+            <li>Allows Decoupling within the application
+               <span style="font-size: 0.8em;">
+                  django.db.models.signals.pre_save <br/>
+                  django.db.models.signals.post_save <br/>
+                  django.db.models.signals.pre_delete <br/>
+                  django.db.models.signals.post_delete<br/>
+                  django.core.signals.request_started<br/>
+                  django.core.signals.request_finished<br/>
+               </span>
+            </li>
+          </ul>
+          <a href="https://github.com/JaneliaSciComp/VirusServices/blob/master/service/signals.py">https://github.com/signals.py</a>
+      </section>
+
+      <section data-transition="none">
+         <h3>Django Commands</h3>
+          <ul style="list-style-type: none;">
+            <li>Allow to use Django ORM for data manipulation instead of pure SQL:</li>
+              <pre>
+                <code>
+                  capsid = Item(
+                    alias=capsid_name,
+                    name=capsid_name,
+                    VS_name=capsid_name,
+                    category=capsid_category,
+                    created_by=getDefUser()
+                  )
+                  capsid.save()
+
+                  users = User.objects.filter(email=email).first()
+                </code>
+              </pre>
+          </ul>
+      </section>
+   </div>
+</div>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+   // More info about config & dependencies:
+   // - https://github.com/hakimel/reveal.js#configuration
+   // - https://github.com/hakimel/reveal.js#dependencies
+   Reveal.initialize(
+       {
+          dependencies: [
+             {src: 'plugin/markdown/marked.js'},
+             {src: 'plugin/markdown/markdown.js'},
+             {src: 'plugin/notes/notes.js', async: true},
+             {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+             }
+             }
+          ],
+          slideNumber: true,
+          transition: 'none',
+          previewLinks: false,
+          controls: true,
+          progress: true,
+          history: true,
+
+       },
+   );
+</script>
+</body>
+</html>

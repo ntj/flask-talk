@@ -1,0 +1,376 @@
+<html>
+<head>
+   <link rel="stylesheet" href="css/reveal.css">
+   <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+   <link rel="stylesheet" href="css/theme/league.css">
+   <link rel="stylesheet" href="css/overrides.css">
+   <title>Flask</title>
+</head>
+<body>
+<div class="reveal">
+   <div class="slides">
+      <!------------------------------------------------------
+         Title
+      ------------------------------------------------------->
+      <section data-transition="none">
+         <div class="slide-pictures-container many">
+            <div class="slide-picture">
+               <h2>Queuing for the Web</h2>
+            </div>
+         </div>
+      </section>
+
+     <!------------------------------------------------------
+         First Slides
+      ------------------------------------------------------->
+      <section data-transition="none">
+        <h3>Queuing for the Web</h3>
+         <div class="slide-pictures-container stillmany">
+            <div class="slide-picture">
+               <img class="diagram" src="img/msg/Queue-Title.png" />
+            </div>
+         </div>
+        <div style="visibility: hidden">
+            <ul>
+              <li>
+                FIFO (First In, First Out)
+              </li>
+              <li>
+                Run tasks asynchronously, triggered by a web application
+              </li>
+            </ul>
+         </div>
+      </section>
+
+      <section data-transition="none">
+        <h3>Queuing for the Web</h3>
+         <div class="slide-pictures-container stillmany">
+            <div class="slide-picture">
+               <img class="diagram" src="img/msg/Queue-Title.png" />
+            </div>
+           <div class="slide-picture">
+               <img class="diagram" src="img/msg/Light_on_cinema_queue.jpg" />
+             <div class="image-caption">By Neil Rickards CC BY 2.0</div>
+           </div>
+         </div>
+         <div>
+            <ul class="fragment">
+              <li>
+                FIFO (First In, First Out)
+              </li>
+              <li>
+                Run tasks asynchronously, triggered by a web application
+              </li>
+            </ul>
+         </div>
+      </section>
+
+      <!------------------------------------------------------
+         Demo
+      ------------------------------------------------------->
+      <section data-transition="none">
+         <h3>Demo</h3>
+         <video height="400px" controls>
+            <source src="files/Stable-Split-Recording.mov" type="video/mp4">
+         </video>
+      </section>
+
+      <!------------------------------------------------------
+         Tool chain
+      ------------------------------------------------------->
+      <section data-transition="none">
+         <h3>Queuing for the Web</h3>
+         <div class="slide-pictures-container manymany">
+            <div class="slide-picture">
+               <img class="transparent" src="img/msg/flask-logo.png"/>
+               <div class="caption">
+                  Flask
+               </div>
+               <div class="caption">
+                  Web Framework
+               </div>
+            </div>
+            <div class="slide-picture picture-middle">
+               <div class="fa-icon">
+                  <i class="fa fa-plus"></i>
+               </div>
+            </div>
+            <div class="slide-picture">
+               <img class="transparent" src="img/msg/celery_512.png"/>
+               <div class="caption">
+                  Celery
+               </div>
+               <div class="caption">
+                  Task Queue
+               </div>
+            </div>
+            <div class="slide-picture picture-middle">
+               <div class="fa-icon">
+                  <i class="fa fa-plus"></i>
+               </div>
+            </div>
+            <div class="slide-picture">
+               <img class="transparent" src="img/msg/rabbitmq.svg"/>
+               <div class="caption">
+                  Rabbit MQ
+               </div>
+               <div class="caption">
+                  Message Broker
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+      <!------------------------------------------------------
+         Code
+      ------------------------------------------------------->
+      <section data-transition="none">
+        <h3>Keep code separate</h3>
+         <div class="slide-pictures-container stillmany">
+           <div class="slide-picture">
+               <img class="diagram" src="img/msg/ImagingRepo.png" />
+           </div>
+           <div class="slide-picture">
+               <img class="diagram" src="img/msg/SplitGenRepo.png" />
+           </div>
+         </div>
+        <div>
+          <ul class="fragment">
+            <li>Use independently</li>
+            <li>Keep updated and in-sync</li>
+            <li style="list-style-image: url('img/msg/arrow.svg');">Increased maintainability</li>
+          </ul>
+        </div>
+      </section>
+
+      <!------------------------------------------------------
+         Architecture
+      ------------------------------------------------------->
+      <section>
+         <h3>Architecture</h3>
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img class="diagram" src="img/msg/Architecture-First.svg" />
+            </div>
+         </div>
+         <!-- The broker is the message server, routing messages from producers to consumers -->
+      </section>
+
+      <section>
+         <h3>Architecture</h3>
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img class="diagram" src="img/msg/Architecture-Names.svg" />
+            </div>
+         </div>
+      </section>
+
+
+      <!------------------------------------------------------
+         Demo - Backend
+      ------------------------------------------------------->
+      <section data-transition="none">
+         <h3>Demo 2 - Backend</h3>
+         <video height="400px" controls>
+            <source src="files/Celery.mov" type="video/mp4">
+         </video>
+      </section>
+
+      <!------------------------------------------------------
+         Benefit
+      ------------------------------------------------------->
+      <section data-transition="none">
+         <h2>Benefit</h2>
+      </section>
+
+     <section data-transition="none">
+         <h3>Before</h3>
+         <div class="slide-pictures-container many">
+            <div class="slide-picture">
+              <img src="img/msg/ActorScript.png" />
+            </div>
+            <div class="slide-picture">
+               <img src="img/msg/MultipleScripts.png" />
+            </div>
+         </div>
+        <div>
+          <ul>
+            <li>Gatekeeper</li>
+            <li>Technical Expert</li>
+          </ul>
+        </div>
+         <div style="visibility: hidden;">
+           Make script available for everyone
+         </div>
+      </section>
+
+     <section data-transition="none">
+         <h3>Now</h3>
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img src="img/msg/ActorWebScript.png" />
+            </div>
+         </div>
+         <div style="visibility: hidden;">
+           Make script available for everyone
+         </div>
+      </section>
+
+      <section data-transition="none">
+         <h3>Availability</h3>
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img src="img/msg/ActorWebScript.png" />
+            </div>
+         </div>
+         <div>
+           Make script available for everyone
+         </div>
+      </section>
+
+      <section data-transition="none">
+         <h3>Usability</h3>
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img src="img/msg/ActorWebScript.png" />
+            </div>
+         </div>
+         <div>
+           Choose intuitive design, include validation
+         </div>
+      </section>
+
+
+      <!------------------------------------------------------
+         Use Case 1
+      ------------------------------------------------------->
+      <section data-transition="none">
+         <h2>Use Cases</h2>
+      </section>
+
+      <section data-transition="none">
+         <h4>Call a script from a web page</h4>
+           <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img src="img/msg/Script.png" />
+            </div>
+           </div>
+      </section>
+
+      <!------------------------------------------------------
+         Celery Beat
+      ------------------------------------------------------->
+      <section data-transition="none">
+        <h3>Celery Beat</h3>
+        <ul>
+           <li>Periodic task scheduler</li>
+           <li>Kicks off tasks at regular intervals (hourly, daily, weekly etc.)</li>
+         </ul>
+      </section>
+
+      <!------------------------------------------------------
+         Use Case 2 - Recurring job
+      ------------------------------------------------------->
+      <section data-transition="none">
+       <h4>Clean-up old files / folders</h4>
+        <a href="http://stable-split/result">http://stable-split/result</a>
+       <div class="slide-pictures-container few">
+         <div class="slide-picture">
+          <img class="transparent" src="img/msg/splitgen-jobs.png"/>
+         </div>
+       </div>
+      </section>
+
+      <section data-transition="none">
+       <h4>Update status</h4>
+       <div class="slide-pictures-container few">
+         <div class="slide-picture">
+          <img src="img/msg/lightsheet-jobs.png"/>
+         </div>
+       </div>
+      </section>
+
+     <section data-transition="none">
+       <h4>Update status</h4>
+       <div class="slide-pictures-container few">
+         <div class="slide-picture">
+          <img src="img/msg/Jobs.png"/>
+         </div>
+       </div>
+      </section>
+
+     <section data-transition="none">
+       <h4>Delete intermediate output</h4>
+       <div class="slide-pictures-container few">
+         <div class="slide-picture">
+          <img src="img/msg/webstation.png"/>
+         </div>
+       </div>
+     </section>
+
+     <section>
+       <h4>Celery Beat vs. Cron</h4>
+       <a href="https://github.com/JaneliaSciComp/stable-split-cross-generator/blob/master/myapp/views.py">github.com/stable-split</a>
+       <div class="slide-pictures-container few">
+         <div class="slide-picture">
+          <img src="img/msg/celery-beat.png"/>
+         </div>
+       </div>
+     </section>
+
+     <section>
+       <h3>How-to?</h3>
+       <div>
+         <ol>
+           <li class="fragment">Develop script</li>
+           <li class="fragment">Develop web application</li>
+           <li class="fragment">Set up a VM (Ubuntu or Scientific Linux)</li>
+           <li class="fragment">Install webserver like NGINX</li>
+           <li class="fragment">Install RabbitMQ</li>
+           <li class="fragment">Install process manager like Supervisor</li>
+           <li class="fragment">Celery and uWSGI can be installed as a Python module</li>
+           <li class="fragment">Deploy!</li>
+         </ol>
+       </div>
+     </section>
+
+     <section data-transition="none">
+       <div class="fade-out">Thanks to Tom Kazimiers!</div>
+       <h2>Queuing for the Web</h2>
+       <br/><br/>
+       <h4>Questions?</h4>
+     </section>
+   </div>
+</div>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+   // More info about config & dependencies:
+   // - https://github.com/hakimel/reveal.js#configuration
+   // - https://github.com/hakimel/reveal.js#dependencies
+   Reveal.initialize(
+       {
+          dependencies: [
+             {src: 'plugin/markdown/marked.js'},
+             {src: 'plugin/markdown/markdown.js'},
+             {src: 'plugin/notes/notes.js', async: true},
+             {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+             }
+             }
+          ],
+          slideNumber: true,
+          transition: 'none',
+          previewLinks: false,
+          controls: true,
+          progress: true,
+          history: true,
+
+       },
+   );
+</script>
+</body>
+</html>

@@ -32,6 +32,10 @@
     max-height: 500px;
 }
 
+.reveal .slide-pictures-container.more img{
+    max-height: 480px;
+}
+
 .reveal .slide-pictures-container.many img{
     max-height: 300px;
 }
@@ -53,6 +57,7 @@
 .reveal .image-caption{
     font-size: small;
     text-align: right;
+    margin-right: 1em;
 }
 
 .reveal section .slide-pic {
@@ -128,6 +133,58 @@
     background-color: #efb966;
 }
 
+.reveal img.diagram {
+    border: 4px solid #BBB;
+}
+
+.reveal img.transparent {
+    background: None;
+    box-shadow: None;
+}
+
+.reveal .picture-middle {
+    margin-top: 2em;
+}
+
+.reveal .fa-icon {
+    font-size: 1.5em;
+    color: #EEE;
+}
+
+.reveal .multiple-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.reveal .caption {
+    font-size: 0.8em;
+    color: #EEE;
+}
+
+.reveal section .slide-logo {
+    height: 3em;
+    background: None;
+    border: None;
+    box-shadow: None;
+    float: right;
+    margin-top: -2em;
+}
+
+.reveal {
+    background-image: url('img/msg/doneyet.jpg');
+    background-repeat: no-repeat;
+}
+
+.reveal .hidden {
+    visibility: hidden;
+}
+
+.fade-out {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
 #mvc {
     padding-bottom: 2em;
     padding-top: 2em;
@@ -135,4 +192,16 @@
     flex-direction: column;
     justify-content: space-between;
     min-width: 11em;
+}
+
+.icon-green {
+    color: green;
+}
+
+.icon-red {
+    color: red;
+}
+
+section ul li {
+    font-size: 0.8em !important;
 }

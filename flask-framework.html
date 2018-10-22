@@ -1,0 +1,482 @@
+<html>
+<head>
+   <link rel="stylesheet" href="css/reveal.css">
+   <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+   <link rel="stylesheet" href="css/theme/serif.css">
+   <link rel="stylesheet" href="css/overrides.css">
+   <title>Flask</title>
+</head>
+<body>
+<div class="reveal">
+   <div class="slides">
+
+      <!------------------------------------------------------
+         Intro
+      ------------------------------------------------------->
+
+      <section data-transition="none">
+         <div class="slide-picture-no-shadow" id="mvc">
+            <img src="files/flask.png"/>
+         </div>
+      </section>
+
+      <section data-transition="none">
+         <h3>Outline</h3>
+         <ul>
+            <li>Overview & Examples</li>
+            <li>Architecture</li>
+            <li>Web DevOps with Flightplan</li>
+         </ul>
+      </section>
+
+      <section>
+         <h3>Which framework should I</h3>
+         <h3>choose?</h3>
+         <div class="slide-pictures-container manymany">
+            <img class="slide-pic logo" src="files/drupal_8_logo.png"/>
+            <img class="slide-pic" src="files/react.png"/>
+            <img class="slide-pic" src="files/flask.png"/>
+            <img class="slide-pic" src="files/django.png"/>
+            <img class="slide-pic" src="files/WordPress_blue_logo.svg.png"/>
+         </div>
+      </section>
+
+      <section>
+         <h3>Do you need a CMS?</h3>
+         <h3>No</h3>
+         <div class="slide-pictures-container manymany logos">
+            <img class="slide-pic" style="visibility: hidden;" src="files/drupal_8_logo.png"/>
+            <img class="slide-pic" src="files/react.png"/>
+            <img class="slide-pic" src="files/flask.png"/>
+            <img class="slide-pic" src="files/django.png"/>
+            <img class="slide-pic" style="visibility: hidden;" src="files/WordPress_blue_logo.svg.png"/>
+         </div>
+      </section>
+
+      <section>
+         <h3>Data Modeling needed? Yes</h3>
+         <h3>Use Python to code? Yes</h3>
+         <div class="slide-pictures-container manymany logos">
+            <img class="slide-pic" style="visibility: hidden;" src="files/drupal_8_logo.png"/>
+            <img class="slide-pic" src="files/react-placeholder.png" style="box-shadow: none;"/>
+            <img class="slide-pic" src="files/flask.png"/>
+            <img class="slide-pic" src="files/django.png"/>
+            <img class="slide-pic" style="visibility: hidden;" src="files/WordPress_blue_logo.svg.png"/>
+         </div>
+      </section>
+
+      <section data-transition="none">
+         <h3>Light-weight and flexible</h3>
+         <h3>&nbsp;</h3>
+         <div class="slide-pictures-container many">
+            <img class="slide-pic" src="files/flask.png"/>
+         </div>
+      </section>
+
+      <!------------------------------------------------------
+         Examples
+      ------------------------------------------------------->
+
+      <section data-transition="none">
+         <h3>Micro Framework</h3>
+         <div class="slide-pictures-container stillmany">
+            <div class="slide-picture">
+               <img src="img/flask/lightsheet-2.png"/>
+            </div>
+            <div class="slide-picture">
+               <img src="img/flask/Job-Status.png"/>
+            </div>
+            <div class="slide-picture">
+               <img src="img/flask/Project-Structure-crop.png"/>
+            </div>
+            <div class="slide-picture">
+               <img src="img/flask/body-table-blur.png"/>
+            </div>
+            <div class="slide-picture">
+               <img src="img/flask/Gallery.png"/>
+            </div>
+         </div>
+      </section>
+
+      <!------------------------------------------------------
+         Lightsheet
+      ------------------------------------------------------->
+
+      <section data-transition="none">
+         <h3>Lightsheet Pipeline</h3>
+         Landing page
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img src="img/flask/lightsheet-2.png"/>
+            </div>
+         </div>
+         <aside class="notes">
+            Flask is called micro-framework
+         </aside>
+      </section>
+
+      <section data-transition="none">
+         <h3>Lightsheet Pipeline</h3>
+         Landing page
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img src="img/flask/lightsheet-1-blur.png"/>
+            </div>
+         </div>
+         <aside class="notes">
+            Flask is called micro-framework
+         </aside>
+      </section>
+
+      <section data-transition="none">
+         <h3>Lightsheet Pipeline</h3>
+         Job status
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img src="img/flask/lightsheet-4.png"/>
+            </div>
+         </div>
+         <aside class="notes">
+            Flask is called micro-framework
+         </aside>
+      </section>
+
+      <section data-transition="none">
+         <h3>Lightsheet Pipeline</h3>
+         Admin interface
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img src="img/flask/lightsheet-6.png"/>
+            </div>
+         </div>
+         <aside class="notes">
+            Flask is called micro-framework
+         </aside>
+      </section>
+
+      <section data-transition="none">
+         <h3>Lightsheet Pipeline</h3>
+         Admin interface
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img src="img/flask/lightsheet-5.png"/>
+            </div>
+         </div>
+      </section>
+
+      <!------------------------------------------------------
+         Architecture
+      ------------------------------------------------------->
+
+      <section data-transition="none">
+         <h2>Architecture</h2>
+      </section>
+
+      <section data-transition="none">
+         <h2><span class="highlight-letter">M</span>odel <span class="highlight-letter">V</span>iew <span class="highlight-letter">C</span>ontroller</h2>
+         <h3>Software Architecture Pattern</h3>
+      </section>
+
+      <section data-transition="none">
+         <h3><span class="highlight-letter">M</span>odel <span class="highlight-letter">V</span>iew <span class="highlight-letter">C</span>ontroller</h3>
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img src="img/flask/Webpage-only.svg"/>
+            </div>
+            <div class="slide-picture" id="mvc">
+               <div>View</div>
+               <div style="visibility: hidden;">Controler</div>
+               <div style="visibility: hidden;">Model</div>
+            </div>
+         </div>
+      </section>
+
+      <section data-transition="none">
+         <h3><span class="highlight-letter">M</span>odel <span class="highlight-letter">V</span>iew <span class="highlight-letter">C</span>ontroller</h3>
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img src="img/flask/WebpageModel.svg"/>
+            </div>
+            <div class="slide-picture" id="mvc">
+               <div>View</div>
+               <div style="visibility: hidden;">Controler</div>
+               <div>Model</div>
+            </div>
+         </div>
+      </section>
+
+      <section data-transition="none">
+         <h3><span class="highlight-letter">M</span>odel <span class="highlight-letter">V</span>iew <span class="highlight-letter">C</span>ontroller</h3>
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img src="img/flask/MVC-Complete.svg"/>
+            </div>
+            <div class="slide-picture" id="mvc">
+               <div>View</div>
+               <div>Controller</div>
+               <div>Model</div>
+            </div>
+         </div>
+      </section>
+
+      <section data-transition="none">
+         <h3><span class="highlight-letter">M</span>odel <span class="highlight-letter">V</span>iew <span class="highlight-letter">C</span>ontroller</h3>
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img src="img/flask/MVC-Complete.svg"/>
+            </div>
+            <div class="slide-picture" id="mvc">
+               <div>View: templates/ </div>
+               <div>Controller: views.py</div>
+               <div>Model: models.py</div>
+            </div>
+         </div>
+      </section>
+
+      <section data-transition="none">
+         <h3><span class="highlight-letter">M</span>odel <span class="highlight-letter">V</span>iew <span class="highlight-letter">P</span>resenter</h3>
+            <div class="slide-pictures-container few">
+               <div class="slide-picture">
+                  <img src="img/flask/MVC-Complete.svg"/>
+               </div>
+               <div class="slide-picture" id="mvc">
+                  <div>View: templates/</div>
+                  <div>Presenter: views.py</div>
+                  <div>Model: models.py</div>
+               </div>
+            </div>
+      </section>
+
+      <section data-transition="none">
+         <h3><span class="highlight-letter">M</span>odel <span class="highlight-letter">T</span>emplate <span class="highlight-letter">V</span>iew</h3>
+            <div class="slide-pictures-container few">
+               <div class="slide-picture">
+                  <img src="img/flask/MVC-Complete.svg"/>
+               </div>
+               <div class="slide-picture" id="mvc">
+                  <div>Template: templates/</div>
+                  <div>View: views.py</div>
+                  <div>Model: models.py</div>
+               </div>
+            </div>
+      </section>
+
+      <!-- MVC Benefits -->
+      <section data-transition="none">
+         <h2>What</h2>
+         <h2>do we get out of it?</h2>
+         <ul>
+            <li class="fragment" data-fragment-index="1">Understand</li>
+            <li class="fragment" data-fragment-index="2" >Copy & Adapt</li>
+            <li class="fragment" data-fragment-index="3" >Know-How</li>
+         </ul>
+      </section>
+
+      <!------------------------------------------------------
+         Jinja Template Language
+      ------------------------------------------------------->
+      <section>
+         <h2>Jinja2 Template Engine</h2>
+         <img src="files/jinja-small.png" class="jinja-logo-big"/>
+      </section>
+
+      <section data-transition="none">
+         <h3>Jinja2 Template Engine</h3>
+         <img src="files/jinja-small.png" class="jinja-logo"/>
+         <div class="slide-pictures-container many">
+            <div class="slide-picture listing" style="float: left;">
+               <ul>
+                  <li>Variables, Loops, Conditions</li>
+                  <li>Define your own filters</li>
+                  <li style="visibility: hidden;">Includes, Extends</li>
+               </ul>
+            </div>
+            <div>
+               <pre>
+                  <code data-trim data-noescape>
+                     {% <mark class="mark1">for</mark> currentJobInfo <mark class="mark1">in</mark> parentJobInfo %}
+                        {% <mark class="mark3">if</mark> 'creationDate' <mark class="mark3">in</mark> currentJobInfo %}
+                     {{ currentJobInfo.creationDate <mark class="mark2">| strftime</mark> }}
+                        {% <mark class="mark3">else</mark> %}
+                           job {{ loop.index }}
+                        {% <mark class="mark3">endif</mark> %}
+                     {% <mark class="mark1">endfor</mark> %}
+	                </code>
+               </pre>
+            </div>
+         </div>
+      </section>
+
+      <section data-transition="none">
+         <h3>Jinja2 Template Engine</h3>
+         <img src="files/jinja-small.png" class="jinja-logo"/>
+         <div class="slide-pictures-container many">
+            <div class="slide-picture listing" style="float: left;">
+               <ul>
+                  <li>Variables, Loops, Conditions</li>
+                  <li>Define your own filters</li>
+                  <li>Includes, Extends</li>
+               </ul>
+            </div>
+            <div>
+               <pre>
+                  <code data-trim data-noescape style="margin-top: 2.4em;">
+                     {% for param in step.parameter %}
+                        {% for key, value in config.parameterDictionary.rare.items() %}
+                     {% <mark class="mark2">include "parameter.html"</mark> ignore missing with context %}
+                        {% endfor %}
+                     {% endfor %}
+	                </code>
+               </pre>
+            </div>
+         </div>
+      </section>
+
+      <!------------------------------------------------------
+         Routing
+      ------------------------------------------------------->
+
+      <section data-transition="none">
+         <h2>Routing</h2>
+         <div class="slide-pictures-container many">
+            <pre>
+               <code data-trim data-noescape style="margin: 1em 0 0 8em;">
+                  <mark class="mark2">@app.route('/search')</mark>
+                  def search():
+                     return render_template('search.html',
+                     logged_in=True,
+                     version = getAppVersion(app.root_path))
+               </code>
+            </pre>
+         </div>
+      </section>
+
+      <section data-transition="none">
+         <h3>Friendly URLs</h3>
+         <div class="float: left;">
+            <ul class="friendly-urls">
+               <li>https://www.janelia.org/open-science/wavesurfer</li>
+               <li>https://en.wikipedia.org/wiki/HHMI</li>
+            </ul>
+         </div>
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img src="img/flask/Friendly-URLs.png"/>
+            </div>
+         </div>
+      </section>
+
+      <section data-transition="none">
+         <h3>Friendly URLs</h3>
+         <div class="float: left;">
+            <ul class="friendly-urls">
+               <li>https://www.janelia.org/open-science/wavesurfer</li>
+               <li>https://en.wikipedia.org/wiki/HHMI</li>
+            </ul>
+         </div>
+         <div class="slide-pictures-container few">
+            <div class="slide-picture" style="padding-top: 0.2em;">
+               <img src="img/flask/Friendly-URLs-zoom.png"/>
+            </div>
+         </div>
+      </section>
+
+      <!-- Routing Benefits -->
+      <section data-transition="none">
+         <h2>What</h2>
+         <h2>do we get out of it?</h2>
+      </section>
+
+      <section>
+         <h3>Link content</h3>
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img src="img/flask/sketch-graphic-no-background.png" style="box-shadow: none"/>
+            </div>
+         </div>
+      </section>
+
+      <!------------------------------------------------------
+         Flightplan
+      ------------------------------------------------------->
+
+      <section data-transition="none">
+         <h3>Flightplan</h2>
+         <a href="https://github.com/JaneliaSciComp/lightsheet-pipeline/blob/master/lightsheetInterface/flightplan.js">
+            [...]/lightsheetInterface/flightplan.js
+         </a>
+         <div class="slide-pictures-container many" style="margin-top: 0.8em;">
+            <div class="slide-picture">
+               <img src="img/flask/flightplan.png"/>
+            </div>
+         </div>
+         <aside class="notes">
+            Flightplan is a node.js library for streamlining application deployment or systems administration tasks.
+            written in JavaScript
+            run commands from your local machine either on your local or on a remote host
+         </aside>
+      </section>
+
+      <!-- Flightplan Benefits -->
+      <section data-transition="none">
+         <h2>What</h2>
+         <h2>do we get out of it?</h2>
+         <aside class="notes">
+            Agile, short iterations, immediate feedback, especially for web
+         </aside>
+      </section>
+
+      <!------------------------------------------------------
+         Coming soon
+      ------------------------------------------------------->
+
+      <section data-transition="none">
+         <h3>Coming soon</h2>
+            <ul>
+               <li>Include existing image processing scripts</li>
+               <li>Make page available for more than one pipeline</li>
+               <li>Hackathon!</li>
+            </ul>
+      </section>
+
+      <section data-transition="none">
+         <div class="slide-picture-no-shadow" style="max-width: 60%; margin: auto;">
+            <img src="files/flask.png"/>
+            <br/><br/>
+            <h3>Questions?</h3>
+         </div>
+      </section>
+
+   </div>
+</div>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+   // More info about config & dependencies:
+   // - https://github.com/hakimel/reveal.js#configuration
+   // - https://github.com/hakimel/reveal.js#dependencies
+   Reveal.initialize(
+       {
+          dependencies: [
+             {src: 'plugin/markdown/marked.js'},
+             {src: 'plugin/markdown/markdown.js'},
+             {src: 'plugin/notes/notes.js', async: true},
+             {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+             }
+             }
+          ],
+          slideNumber: true,
+          transition: 'none',
+          previewLinks: false,
+          controls: true,
+          progress: true,
+          history: true,
+
+       },
+   );
+</script>
+</body>
+</html>
