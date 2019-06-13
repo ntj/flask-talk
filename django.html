@@ -83,13 +83,16 @@
 
      <section>
        <h3>Current Process</h3>
-          <div class="slide-pictures-container stillmany">
+          <div class="slide-pictures-container few">
             <div class="slide-picture">
-               <img class="slide-pic" src="img/django/janelia-org.png" />
+               <img class="slide-pic" src="img/django/spreadsheet.png" />
             </div>
-            <div class="slide-picture">
-               <img class="slide-pic" src="img/django/cognito.png" />
-            </div>
+         </div>
+     </section>
+
+     <section>
+       <h3>Current Process</h3>
+          <div class="slide-pictures-container few">
             <div class="slide-picture">
                <img class="slide-pic" src="img/django/spreadsheet2.png" />
             </div>
@@ -98,17 +101,33 @@
 
      <section>
        <h3>Current Process</h3>
-          <div class="slide-pictures-container stillmany">
-            <div class="slide-picture">
-               <img class="slide-pic" src="img/django/janelia-org.png" />
-            </div>
-            <div class="slide-picture">
-               <img class="slide-pic" src="img/django/cognito.png" />
-            </div>
+          <div class="slide-pictures-container few">
             <div class="slide-picture">
                <img class="slide-pic" src="img/django/spreadsheet3.png" />
             </div>
          </div>
+     </section>
+
+     <section>
+       <h3>Why switch?</h3>
+       <ul>
+          <li>App provides a simplified login using HHMI Okta</li>
+          <li>Data validation possible (uniqueness constraints etc.)<br/>
+            <code style="font-size: 0.75em;">
+              <pre>
+                class Tube(AuditableTable):
+                class Meta:
+                  unique_together = ('box', 'space')
+
+                box = models.ForeignKey(Box, null=True, related_name='tube')
+                concentration = models.FloatField(blank=True, default=0)
+                (...)
+              </pre>
+            </code>
+          </li>
+         <li>Customer can monitor the status of their requests</li>
+         <li>Alerts and Notifications, Reporting</li>
+       </ul>
      </section>
 
      <section data-transition="none">
@@ -117,7 +136,20 @@
                <img class="slide-pic logo" src="img/django/easter-eggs.jpg" />
             </div>
          </div>
-      </section>
+     </section>
+
+     <section data-transition="none">
+         <h3>Architecture</h3>
+         <div class="slide-pictures-container few">
+            <div class="">
+               <img class="" src="img/django/architecture.svg" />
+            </div>
+         </div>
+         <ul>
+            <li>Fully dockerized appliation using Docker Compose</li>
+            <li>Compose is a tool for defining and running multi-container Docker applications.</li>
+         </ul>
+     </section>
 
      <section data-transition="none">
          <h3>What went wrong?</h3>
@@ -141,10 +173,20 @@
       </section>
 
      <section data-transition="none"><br/>
-         <h3>Data Display vs. View Layer</h3>
+         <h3>Data Manipulation</h3>
+          <span style="font-size: smaller"><a style="font-size: smaller;" href="https://github.com/JaneliaSciComp/VirusServices/blob/1813875d6ec97ba4b706fa60e75a1f99159d7667/service/views.py">github.com/service/views.py</a><br/></span>
+          <div class="slide-pictures-container more">
+            <div class="">
+               <img class="" src="img/django/preps.png" />
+            </div>
+         </div>
+      </section>
+
+     <section data-transition="none"><br/>
+         <h3>Data Display vs. View</h3>
           <ul style="list-style-type: none;">
             <li>Internal value (stored in database)</li>
-            <li>Display value -- user-friendly, human-readable</li>
+            <li>Display value &mdash; user-friendly, human-readable</li>
             <code style="font-size: 0.75em;">
               <pre>
                 DNA_SOURCE = (
@@ -152,9 +194,15 @@
                   ('m', 'Molecular Biology'),
                   ('v', 'Viral Tools')
                 )
+
+                class Prep(AuditableTable):
+                  order_id = models.ForeignKey('customer.Order', related_name='preps')
+                  batch_id = models.ForeignKey(Batch, related_name='batch', null=True, blank=True)
+
+                  DNA_source = models.CharField(max_length=50, blank=True, choices=DNA_SOURCE)
               </pre>
             </code>
-            <li><a href="https://github.com/JaneliaSciComp/VirusServices/blob/1813875d6ec97ba4b706fa60e75a1f99159d7667/service/templates/view_prep.html">github.com/view_prep.html</a></li><br/>
+            <li><span style="font-size: smaller"><a href="https://github.com/JaneliaSciComp/VirusServices/blob/1813875d6ec97ba4b706fa60e75a1f99159d7667/service/templates/view_prep.html">github.com/view_prep.html</a></span></li><br/>
           </ul>
       </section>
 
@@ -181,23 +229,51 @@
        <span style="font-size: small;"><a href="https://sunscrapers.com/blog/where-to-put-business-logic-django/">https://sunscrapers.com/blog/where-to-put-business-logic-django/</a></span>
       </section>
 
-      <section data-transition="none">
+     <section data-transition="none">
          <h3>Django Signals</h3>
           <ul>
             <li>Event-based ("create a new record")</li>
             <li>Sender / Receiver Principle </li>
             <li>Allows Decoupling within the application
-               <span style="font-size: 0.8em;">
+            </li>
+          </ul>
+          <code>
+             <pre>
                   django.db.models.signals.pre_save <br/>
                   django.db.models.signals.post_save <br/>
                   django.db.models.signals.pre_delete <br/>
                   django.db.models.signals.post_delete<br/>
                   django.core.signals.request_started<br/>
                   django.core.signals.request_finished<br/>
-               </span>
-            </li>
+             </pre>
+          </code>
+      </section>
+
+
+      <section data-transition="none">
+         <h3>Django Signals</h3>
+          <ul>
+            <li>Event-based ("create a new record")</li>
+            <li>Sender / Receiver Principle </li>
+            <li>Allows Decoupling within the application</li>
           </ul>
-          <a href="https://github.com/JaneliaSciComp/VirusServices/blob/master/service/signals.py">https://github.com/signals.py</a>
+          <code>
+             <pre>
+               # Compute a valid Order name based on the Orders in the system
+               @receiver(pre_save, sender=Tube)
+               def tube_save_before(sender, instance, *args, **kwargs):
+                if instance:
+                  # Get tube before saving
+                  t = Tube.objects.filter(id=instance.id).first()
+                  if t is not None and (t.volume != instance.volume):
+                      th = Tube_History(
+                          tube=t,
+                          volume=t.volume,
+                          concentration=t.concentration
+                      )
+                      th.save()
+             </pre>
+          </code>
       </section>
 
       <section data-transition="none">
@@ -220,6 +296,21 @@
               </pre>
           </ul>
       </section>
+
+
+     <section>
+       <h3>How-to?</h3>
+       <div>
+         <ol>
+           <li class="fragment">Install Docker</li>
+           <li class="fragment">Install Docker-Compose</li>
+           <li class="fragment">Download docker compose file</li>
+           <li class="fragment">Run docker-compose pull</li>
+           <li class="fragment">Run docker-compose up</li>
+           <li class="fragment">Done!</li>
+         </ol>
+       </div>
+     </section>
    </div>
 </div>
 <script src="lib/js/head.min.js"></script>
