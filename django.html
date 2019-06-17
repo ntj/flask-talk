@@ -20,6 +20,20 @@
      </section>
 
      <section data-transition="none">
+        <h3>Purpose</h3>
+        <ul>
+          <li>Request Input</li>
+          <li>Manage Orders and Requesters</li>
+          <li>Keep track of Inventory</li>
+        </ul>
+     </section>
+
+     <section>
+       <h2>80/20 rule</h2>
+       <h4>In software engineering</h4>
+     </section>
+
+     <section data-transition="none">
          <h3>Viral App</h3>
          <div class="slide-pictures-container few">
             <div class="slide-picture">
@@ -113,20 +127,25 @@
               <img class="slide-pic" src="img/django/admin.png" />
            </div>
          </div>
-         Management of Orders, Requests, Inventory, Users, Scheduling
+         Orders, Requests, Inventory, Users, Scheduling
      </section>
 
      <section>
          <h3>Stats</h3>
           <ul>
-            <li>~ 150 Requester</li>
+            <li>~ 150 Requesters</li>
             <li>~ 400 Orders</li>
             <li>~ 210 Orders from Janelia</li>
-            <li>~ 65 Requester from Janelia</li>
-            <li>~ 800 Different Items in the Inventory</li>
+            <li>~ 65 Requesters from Janelia</li>
+            <li>~ 800 different Items in the Inventory</li>
             <li>~ 130 Routes</li>
           </ul>
       </section>
+
+     <section>
+       <h2>Status</h2>
+       <a href="https://viraltools.janelia.org/">https://viraltools.janelia.org/</a>
+     </section>
 
      <section>
        <h3>Current Process</h3>
@@ -206,6 +225,15 @@
          </ul>
      </section>
 
+     <section data-transition="none">
+         <h4>Entity-Relationship Diagram</h4>
+         <div class="slide-pictures-container few">
+            <div class="">
+               <img class="" src="img/django/er.png" />
+            </div>
+         </div>
+     </section>
+
      <section>
        <h4>Prep / Item Lifecycle</h4>
        <div class="slide-pictures-container few">
@@ -257,12 +285,12 @@
 
      <section data-transition="none"><br/>
          <h3>Data Manipulation</h3>
-          <span style="font-size: smaller"><a style="font-size: smaller;" href="https://github.com/JaneliaSciComp/VirusServices/blob/1813875d6ec97ba4b706fa60e75a1f99159d7667/service/views.py">github.com/service/views.py</a><br/></span>
           <div class="slide-pictures-container more">
             <div class="">
                <img class="" src="img/django/preps.png" />
             </div>
          </div>
+        <span style="font-size: smaller"><a style="font-size: smaller;" href="https://github.com/JaneliaSciComp/VirusServices/blob/1813875d6ec97ba4b706fa60e75a1f99159d7667/service/views.py">github.com/service/views.py</a><br/></span>
       </section>
 
      <section data-transition="none"><br/>
@@ -296,18 +324,7 @@
             <div class="slide-picture">
                <img class="slide-pic" src="img/django/view_code.png" />
             </div>
-         </div>
-      </section>
-
-     <section>
-       <h3><i class="icon-green fa fa-check" aria-hidden="true"></i> Fat Models</h3>
-       <p>
-	      <cite>
-          "The idea &mdash; often presented as a common pattern in MVC-style programming &mdash; is to build thick/fat models and thin controllers.<br/>
-          In Django, that translates to thick models with lots and lots of small methods and thin views which use those methods and keep their logic as minimal as possible. There are lots of benefits to this approach."
-        </cite>
-       </p>
-       <span style="font-size: small;"><a href="https://sunscrapers.com/blog/where-to-put-business-logic-django/">https://sunscrapers.com/blog/where-to-put-business-logic-django/</a></span>
+          </div>
       </section>
 
      <section>
@@ -320,7 +337,38 @@
         </cite>
        </p>
        <span style="font-size: small;"><a href="https://sunscrapers.com/blog/where-to-put-business-logic-django/">https://sunscrapers.com/blog/where-to-put-business-logic-django/</a></span>
-      </section>
+     </section>
+
+     <section>
+       <h3><i class="icon-green fa fa-check" aria-hidden="true"></i> Fat Models</h3>
+       <p>
+	      <cite>
+          "The idea &mdash; often presented as a common pattern in MVC-style programming &mdash; is to build thick/fat models and thin controllers.<br/>
+          In Django, that translates to thick models with lots and lots of small methods and thin views which use those methods and keep their logic as minimal as possible. There are lots of benefits to this approach."
+        </cite>
+       </p>
+       <span style="font-size: small;"><a href="https://sunscrapers.com/blog/where-to-put-business-logic-django/">https://sunscrapers.com/blog/where-to-put-business-logic-django/</a></span>
+     </section>
+
+     <section>
+       <h3><i class="icon-green fa fa-check" aria-hidden="true"></i> Fat Models</h3>
+       <div class="slide-pictures-container few">
+          <div class="slide-picture">
+             <img class="slide-pic" src="img/django/code1.png" />
+          </div>
+       </div>
+       Model Fields
+     </section>
+
+     <section>
+       <h3><i class="icon-green fa fa-check" aria-hidden="true"></i> Fat Models</h3>
+       <div class="slide-pictures-container few">
+          <div class="slide-picture">
+             <img class="slide-pic" src="img/django/code2.png" />
+          </div>
+       </div>
+       Model Functions &rarr; Computed Fields
+     </section>
 
      <section>
        <h2>Advanced Django</h2>
@@ -337,8 +385,8 @@
           </ul>
           <code>
              <pre>
-                  django.db.models.signals.pre_save <br/>
-                  django.db.models.signals.post_save <br/>
+                  <span style="color: cyan;">django.db.models.signals.pre_save</span><br/>
+                  <span style="color: cyan;">django.db.models.signals.post_save</span><br/>
                   django.db.models.signals.pre_delete <br/>
                   django.db.models.signals.post_delete<br/>
                   django.core.signals.request_started<br/>
@@ -350,9 +398,8 @@
       <section data-transition="none">
          <h3>Django Signals</h3>
           <ul>
-            <li>Event-based</li>
-            <li>Sender / Receiver</li>
-            <li>Allows Decoupling within the application
+            <li>Identify changes of field values</li>
+            <li>Keep track of history</li>
           </ul>
           <code>
              <pre>
@@ -439,8 +486,9 @@
      </section>
 
      <section data-transition="none">
-         <h2>Shopping with Django</h2>
-        <h4>Viral Tools Web Application</h4>
+       <h2>Shopping with Django</h2>
+       <h4>Viral Tools Web Application</h4>
+       <h4>Questions?</h4>
      </section>
    </div>
 </div>
