@@ -20,31 +20,63 @@
      </section>
 
      <section data-transition="none">
-
          <h3>Viral App</h3>
          <div class="slide-pictures-container few">
             <div class="slide-picture">
                <img class="slide-pic" src="img/django/viral3.png" />
             </div>
          </div>
+         <ul style="list-style-type: none;">
+           <li>Login</li>
+         </ul>
      </section>
 
      <section data-transition="none">
-         <h3>Viral App</h3>
+         <h3>Viral App - Customer</h3>
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img class="slide-pic" src="img/django/form.png" />
+            </div>
+         </div>
+         <ul style="list-style-type: none;">
+           <li>Data Entry</li>
+         </ul>
+     </section>
+
+     <section data-transition="none">
+         <h3>Viral App - Customer</h3>
+         <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img class="slide-pic" src="img/django/cart.png" />
+            </div>
+         </div>
+         <ul style="list-style-type: none;">
+           <li>Cart</li>
+         </ul>
+     </section>
+
+     <section data-transition="none">
+         <h3>Viral App - Customer</h3>
          <div class="slide-pictures-container few">
             <div class="slide-picture">
                <img class="slide-pic" src="img/django/viral7.png" />
             </div>
          </div>
+         <ul style="list-style-type: none;">
+           <li>Orders</li>
+         </ul>
      </section>
 
      <section data-transition="none">
-         <h3>Viral App</h3>
+         <h3>Viral App - Customer</h3>
          <div class="slide-pictures-container few">
             <div class="slide-picture">
                <img class="slide-pic" src="img/django/viral1.png" />
             </div>
          </div>
+         <ul style="list-style-type: none;">
+           <li>Status</li>
+         </ul>
      </section>
 
      <section data-transition="none">
@@ -54,6 +86,34 @@
                <img class="slide-pic" src="img/django/viral2.png" />
             </div>
          </div>
+         <ul style="list-style-type: none;">
+           <li>Profile</li>
+         </ul>
+     </section>
+
+     <section data-transition="none">
+         <h3>Viral App - Management</h3>
+         <div class="slide-pictures-container manymany">
+           <div class="slide-picture">
+              <img class="slide-pic" src="img/django/dashboard.png" />
+           </div>
+           <div class="slide-picture">
+              <img class="slide-pic" src="img/django/mgmt2.png" />
+           </div>
+           <div class="slide-picture">
+              <img class="slide-pic" src="img/django/mgmt3.png" />
+           </div>
+           <div class="slide-picture">
+              <img class="slide-pic" src="img/django/mgmt4.png" />
+           </div>
+           <div class="slide-picture">
+              <img class="slide-pic" src="img/django/mgmt5.png" />
+           </div>
+           <div class="slide-picture">
+              <img class="slide-pic" src="img/django/admin.png" />
+           </div>
+         </div>
+         Management of Orders, Requests, Inventory, Users, Scheduling
      </section>
 
      <section>
@@ -113,8 +173,9 @@
      <section>
        <h3>Why switch?</h3>
        <ul>
-          <li>App provides a simplified login using HHMI Okta</li>
-          <li>Data validation possible (uniqueness constraints etc.)<br/>
+          <li class="fragment">App provides a simplified login using HHMI Okta</li>
+          <li class="fragment">Data in one place / keep track of history</li>
+          <li class="fragment">Validation possible (uniqueness constraints etc.)<br/>
             <code style="font-size: 0.75em;">
               <pre>
                 class Tube(AuditableTable):
@@ -122,13 +183,13 @@
                   unique_together = ('box', 'space')
 
                 box = models.ForeignKey(Box, null=True, related_name='tube')
-                concentration = models.FloatField(blank=True, default=0)
+                space = models.ForeignKey(Space, null=True, related_name='space')
                 (...)
               </pre>
             </code>
           </li>
-         <li>Customer can monitor the status of their requests</li>
-         <li>Alerts and Notifications, Reporting, Permissions</li>
+         <li class="fragment">Customer can monitor the status of their requests</li>
+         <li class="fragment">Alerts and Notifications, Reporting, Permissions</li>
        </ul>
      </section>
 
@@ -145,6 +206,15 @@
          </ul>
      </section>
 
+     <section>
+       <h4>Prep / Item Lifecycle</h4>
+       <div class="slide-pictures-container few">
+          <div class="slide-picture">
+             <img class="slide-pic" src="img/django/flow-chart.png" />
+          </div>
+       </div>
+     </section>
+
      <section data-transition="none">
          <div class="slide-pictures-container few">
             <div class="slide-picture">
@@ -156,30 +226,32 @@
      <section data-transition="none">
          <h3>What went wrong?</h3>
          <ul>
-            <li>Major focus on user interface, not internal logic</li>
-            <li>Views work only with uploaded data</li>
-            <li>Wrong implementation of data manipulation tasks</li>
+            <li class="fragment">Major focus on user interface, not internal logic</li>
+            <li class="fragment">Views work only with uploaded data</li>
+            <li class="fragment"><span style="color: cyan">Wrong implementation of data manipulation tasks</span></li>
          </ul>
       </section>
-
-     <section>
-       <h4>Prep / Item Lifecycle</h4>
-       <div class="slide-pictures-container few">
-          <div class="slide-picture">
-             <img class="slide-pic" src="img/django/flow-chart.png" />
-          </div>
-       </div>
-     </section>
 
      <section data-transition="none"><br/>
          <h3>Data Manipulation</h3>
           <ul style="list-style-type: none;">
-            <li><i class="icon-green fa fa-check" aria-hidden="true"></i> User interaction ("Press button")</li>
-            <li><i class="icon-green fa fa-check" aria-hidden="true"></i> Event-based ("Create new record")</li>
-            <li><i class="icon-green fa fa-check" aria-hidden="true"></i> Recurring background job (weekly / nightly)</li><br/>
-            <li><i class="icon-red fa fa-times" aria-hidden="true"></i> Not when opening a view!</li>
-            <a href="https://viraltools.janelia.org/service/prep/10493/">https://viraltools.janelia.org/service/prep/10493/</a>
-            <a href="https://github.com/JaneliaSciComp/VirusServices/blob/1813875d6ec97ba4b706fa60e75a1f99159d7667/service/views.py">github.com/service/views.py</a><br/>
+            <li class="fragment"><i class="icon-green fa fa-check" aria-hidden="true"></i> User interaction
+              <ul>
+                <li>Press button</li>
+              </ul>
+            </li>
+            <li class="fragment"><i class="icon-green fa fa-check" aria-hidden="true"></i> Event-based
+              <ul>
+                <li>Create new record</li>
+                <li>Value has changed</li>
+              </ul>
+            </li>
+            <li class="fragment"><i class="icon-green fa fa-check" aria-hidden="true"></i> Recurring background job (weekly / nightly)
+              <ul>
+                <li>Update users / departments from Workday</li>
+              </ul>
+            </li><br/>
+            <li class="fragment"><i class="icon-red fa fa-times" aria-hidden="true"></i> Not when opening a view!</li>
           </ul>
       </section>
 
@@ -208,12 +280,12 @@
 
                 class Prep(AuditableTable):
                   order_id = models.ForeignKey('customer.Order', related_name='preps')
-                  batch_id = models.ForeignKey(Batch, related_name='batch', null=True, blank=True)
+                  batch_id = models.ForeignKey(Batch, null=True, blank=True)
 
                   DNA_source = models.CharField(max_length=50, blank=True, choices=DNA_SOURCE)
               </pre>
             </code>
-            <li><span style="font-size: smaller"><a href="https://github.com/JaneliaSciComp/VirusServices/blob/1813875d6ec97ba4b706fa60e75a1f99159d7667/service/templates/view_prep.html">github.com/view_prep.html</a></span></li><br/>
+            <br/>
           </ul>
       </section>
 
@@ -250,11 +322,16 @@
        <span style="font-size: small;"><a href="https://sunscrapers.com/blog/where-to-put-business-logic-django/">https://sunscrapers.com/blog/where-to-put-business-logic-django/</a></span>
       </section>
 
+     <section>
+       <h2>Advanced Django</h2>
+       <h4>Signals and Commands</h4>
+      </section>
+
      <section data-transition="none">
          <h3>Django Signals</h3>
           <ul>
-            <li>Event-based ("create a new record")</li>
-            <li>Sender / Receiver Principle </li>
+            <li>Event-based</li>
+            <li>Sender / Receiver</li>
             <li>Allows Decoupling within the application
             </li>
           </ul>
@@ -273,9 +350,9 @@
       <section data-transition="none">
          <h3>Django Signals</h3>
           <ul>
-            <li>Event-based ("create a new record")</li>
-            <li>Sender / Receiver Principle </li>
-            <li>Allows Decoupling within the application</li>
+            <li>Event-based</li>
+            <li>Sender / Receiver</li>
+            <li>Allows Decoupling within the application
           </ul>
           <code>
              <pre>
@@ -299,7 +376,11 @@
       <section data-transition="none">
          <h3>Django Commands</h3>
           <ul style="list-style-type: none;">
+            <li>Can be run from the command line<br/>
+              <pre>$ python manage.py update_workday</pre>
+            </li>
             <li>Allow to use Django ORM for data manipulation instead of pure SQL:</li>
+          </ul>
               <pre>
                 <code>
                   capsid = Item(
@@ -314,7 +395,6 @@
                   users = User.objects.filter(email=email).first()
                 </code>
               </pre>
-          </ul>
       </section>
 
      <section>
@@ -341,7 +421,7 @@
      </section>
 
      <section>
-       <h3>How-to?</h3>
+       <h3>Acknowledgements</h3>
        <div class="slide-pictures-container many">
           <div class="slide-picture">
              <img class="slide-pic" src="img/django/jody.jpg" />
@@ -350,12 +430,17 @@
              <img class="slide-pic" src="img/django/rob.jpg" />
           </div>
           <div class="slide-picture">
-             <img class="slide-pic" src="img/django/wendye.png" />
-          </div>
-          <div class="slide-picture">
              <img class="slide-pic" src="img/django/kim.jpg" />
           </div>
+         <div class="slide-picture">
+             <img class="slide-pic" src="img/django/wendye.jpg" />
+          </div>
       </div>
+     </section>
+
+     <section data-transition="none">
+         <h2>Shopping with Django</h2>
+        <h4>Viral Tools Web Application</h4>
      </section>
    </div>
 </div>
