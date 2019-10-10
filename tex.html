@@ -1,0 +1,109 @@
+<html>
+<head>
+   <link rel="stylesheet" href="css/reveal.css">
+   <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+   <link rel="stylesheet" href="css/theme/league.css">
+   <link rel="stylesheet" href="css/overrides.css">
+   <title>Flask</title>
+</head>
+<body>
+<div class="reveal">
+   <div class="slides">
+
+      <!------------------------------------------------------
+         Intro
+      ------------------------------------------------------->
+      <section data-transition="zoom">
+        <div class="slide-pictures-container few">
+            <h3>Introduction to TeX</h3>
+         </div>
+     </section>
+
+     <section data-transition="zoom">
+        <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img class="slide-pic" src="img/kshama.jpg" /><br/>
+            </div>
+         </div>
+     </section>
+
+     <section data-transition="zoom">
+       <h4>Women's Coding Circle</h4>
+        <div class="slide-pictures-container few">
+            <div class="slide-picture">
+               <img class="slide-pic" src="img/logo.png" />
+            </div>
+        </div>
+     </section>
+
+     <section>
+       <h4>What's TeX?</h4>
+       <a href="http://www.texample.net/">http://www.texample.net/</a>
+       <br /><br />
+       <ul>
+         <li>Typesetting system</li>
+         <li>Formatting System</li>
+         <li>Markup Language</li>
+       </ul>
+     </section>
+
+     <section>
+       <h4>What can you do with it?</h4>
+       <li>Create Posters / Papers / Articles</li>
+     </section>
+
+     <section>
+       <h4>Why is it interesting?</h4>
+       <ul>
+        <li>Use your text editor to create documents</li>
+        <li>Elegant design</li>
+       </ul>
+     </section>
+
+     <section>
+       <h4>Donald E. Knuth</h4>
+       <ul>
+        <li>From Wisconsin, professor emeritus at Stanford University</li>
+        <li><a href="https://en.wikipedia.org/wiki/Donald_Knuth">https://en.wikipedia.org/wiki/Donald_Knuth</a></li>
+       </ul>
+     </section>
+
+     <section>
+       <h4>How is it done?</h4>
+       <ul>
+         <li><a href="https://de.wikipedia.org/wiki/Metafont">https://de.wikipedia.org/wiki/Metafont</a></li>
+       </ul>
+     </section>
+   </div>
+</div>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+   // More info about config & dependencies:
+   // - https://github.com/hakimel/reveal.js#configuration
+   // - https://github.com/hakimel/reveal.js#dependencies
+   Reveal.initialize(
+       {
+          dependencies: [
+             {src: 'plugin/markdown/marked.js'},
+             {src: 'plugin/markdown/markdown.js'},
+             {src: 'plugin/notes/notes.js', async: true},
+             {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+             }
+             }
+          ],
+          slideNumber: true,
+          transition: 'none',
+          previewLinks: false,
+          controls: true,
+          progress: true,
+          history: true,
+
+       },
+   );
+</script>
+</body>
+</html>
