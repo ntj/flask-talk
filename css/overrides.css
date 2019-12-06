@@ -48,6 +48,10 @@
     max-height: 200px;
 }
 
+.reveal .slide-pictures-container.most img{
+    max-height: 170px;
+}
+
 .reveal .slide-icon {
     margin: auto;
     font-size: 160px;
@@ -56,7 +60,7 @@
 
 .reveal .image-caption{
     font-size: small;
-    text-align: right;
+    text-align: center;
     margin-right: 1em;
 }
 
