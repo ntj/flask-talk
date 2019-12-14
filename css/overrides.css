@@ -40,8 +40,16 @@
     max-height: 300px;
 }
 
+.reveal .slide-pictures-container.inbetween img{
+    max-height: 240px;
+}
+
 .reveal .slide-pictures-container.stillmany img{
     max-height: 230px;
+}
+
+.reveal .slide-pictures-container.inbetween2 img{
+    max-height: 215px;
 }
 
 .reveal .slide-pictures-container.manymany img{
@@ -204,6 +212,10 @@
 
 .icon-red {
     color: red;
+}
+
+.reveal .django-background {
+    background-image: url("img/django/opensource.png");
 }
 
 section ul li {
