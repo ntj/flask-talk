@@ -1,578 +1,639 @@
-<html>
-<head>
-   <link rel="stylesheet" href="css/reveal.css">
-   <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-   <link rel="stylesheet" href="css/theme/league.css">
-   <link rel="stylesheet" href="css/overrides.css">
-   <title>Flask</title>
-</head>
-<body>
-  <div class="reveal">
-     <div class="slides">
-       <!------------------------------------------------------
-         Intro
-       ------------------------------------------------------->
-       <section data-transition="none" data-background="img/django/django.png">
-          <h2>Viva Django</h2>
-          <h4>Viral App in Production Use</h4>
-       </section>
+    <html>
+    <head>
+       <link rel="stylesheet" href="css/reveal.css">
+       <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+       <link rel="stylesheet" href="css/theme/league.css">
+       <link rel="stylesheet" href="css/overrides.css">
+       <title>Flask</title>
+    </head>
+    <body>
+      <div class="reveal">
+         <div class="slides">
+           <!------------------------------------------------------
+             Intro
+           ------------------------------------------------------->
+           <section data-transition="none">
+              <h3>Viva <img style="vertical-align: middle; max-height: 2em;" class="slide-pic" src="img/django/django-logo.jpg" /></h3>
+              <h4>Viral App in Production Use</h4>
+              <div class="slide-pictures-container more">
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/conference-chairs.jpeg" />
+               </div>
+              </div>
+           </section>
 
-       <section data-transition="none">
-          <h2>Viral App</h2>
-          <h3>E-commerce application</h3>
-          <ol>Customer side
-           <li class="fragment">Cart</li>
-           <li class="fragment">Request Form for Virus Constructs</li>
-           <li class="fragment">View your Orders</li>
-           <li class="fragment">Track process of Requests</li>
-           <li class="fragment">Confirmation Email</li>
-         </ol>
-       </section>
+           <section data-transition="none">
+              <h2>Viral App</h2>
+              <h3>E-commerce application</h3>
+              <ol>Customer side
+               <li class="fragment">Cart</li>
+               <li class="fragment">Request Form for Virus Constructs</li>
+               <li class="fragment">View your Orders</li>
+               <li class="fragment">Track process of Requests</li>
+               <li class="fragment">Confirmation Email</li>
+             </ol>
+           </section>
 
-       <!------------------------------------------------------
-         Access Levels
-       ------------------------------------------------------->
-       <section data-transition="none">
-          <h2>Access Levels</h2>
-          <div class="slide-pictures-container many">
-           <div class="slide-picture" style="max-width: 33%;">
-              <img class="slide-pic" src="img/django/access-levels1.png" />
-              <div class="image-caption">Customer App</div>
-           </div>
-           <div class="slide-picture">
-              <img class="slide-pic" src="img/django/form.png" />
-              <div class="image-caption">Request Form</div>
-           </div>
-          </div>
-       </section>
+           <!------------------------------------------------------
+             Access Levels
+           ------------------------------------------------------->
+           <section data-transition="none">
+              <h2>Access Levels</h2>
+              <div class="slide-pictures-container many">
+               <div class="slide-picture" style="max-width: 33%;">
+                  <img class="slide-pic" src="img/django/access-levels1.png" />
+                  <div class="image-caption">Customer App</div>
+               </div>
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/form.png" />
+                  <div class="image-caption">Request Form</div>
+               </div>
+              </div>
+           </section>
 
-       <section data-transition="none">
-          <h2>Access Levels</h2>
-          <div class="slide-pictures-container many">
-           <div class="slide-picture" style="max-width: 33%;">
-              <img class="slide-pic" src="img/django/access-levels1.png" />
-              <div class="image-caption">Customer App</div>
-           </div>
-           <div class="slide-picture">
-              <img class="slide-pic" src="img/django/code-customer.png" />
-              <div class="image-caption">Customer App</div>
-           </div>
-          </div>
-       </section>
+           <section data-transition="none">
+              <h2>Access Levels</h2>
+              <div class="slide-pictures-container many">
+               <div class="slide-picture" style="max-width: 33%;">
+                  <img class="slide-pic" src="img/django/access-levels1.png" />
+                  <div class="image-caption">Customer App</div>
+               </div>
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/code-customer.png" />
+                  <div class="image-caption">Customer App</div>
+               </div>
+              </div>
+           </section>
 
-       <section data-transition="none">
-          <h2>Access Levels</h2>
-          <div class="slide-pictures-container many">
-           <div class="slide-picture" style="max-width: 33%;">
-              <img class="slide-pic" src="img/django/access-levels2.png" />
-              <div class="image-caption">Service App</div>
-           </div>
-           <div class="slide-picture">
-              <img class="slide-pic" src="img/django/mgmt4.png" />
-              <div class="image-caption">Dashboard</div>
-           </div>
-          </div>
-       </section>
+           <section data-transition="none">
+              <h2>Access Levels</h2>
+              <div class="slide-pictures-container many">
+               <div class="slide-picture" style="max-width: 33%;">
+                  <img class="slide-pic" src="img/django/access-levels2.png" />
+                  <div class="image-caption">Service App</div>
+               </div>
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/mgmt4.png" />
+                  <div class="image-caption">Dashboard</div>
+               </div>
+              </div>
+           </section>
 
-       <section data-transition="none">
-          <h2>Access Levels</h2>
-          <div class="slide-pictures-container many">
-           <div class="slide-picture" style="max-width: 33%;">
-              <img class="slide-pic" src="img/django/access-levels2.png" />
-              <div class="image-caption">Service App</div>
-           </div>
-           <div class="slide-picture">
-              <img class="slide-pic" src="img/django/code-service.png" />
-              <div class="image-caption">Service App</div>
-           </div>
-          </div>
-       </section>
+           <section data-transition="none">
+              <h2>Access Levels</h2>
+              <div class="slide-pictures-container many">
+               <div class="slide-picture" style="max-width: 33%;">
+                  <img class="slide-pic" src="img/django/access-levels2.png" />
+                  <div class="image-caption">Service App</div>
+               </div>
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/code-service.png" />
+                  <div class="image-caption">Service App</div>
+               </div>
+              </div>
+           </section>
 
-       <section data-transition="none">
-          <h2>Access Levels</h2>
-          <div class="slide-pictures-container many">
-           <div class="slide-picture" style="max-width: 33%;">
-              <img class="slide-pic" src="img/django/access-levels3.png" />
-              <div class="image-caption"></div>
-           </div>
-           <div class="slide-picture">
-              <img class="slide-pic" src="img/django/django-admin.png" />
-              <div class="image-caption">Admin Interface</div>
-           </div>
-          </div>
-       </section>
+           <section data-transition="none">
+              <h2>Access Levels</h2>
+              <div class="slide-pictures-container many">
+               <div class="slide-picture" style="max-width: 33%;">
+                  <img class="slide-pic" src="img/django/access-levels3.png" />
+                  <div class="image-caption"></div>
+               </div>
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/django-admin.png" />
+                  <div class="image-caption">Admin Interface</div>
+               </div>
+              </div>
+           </section>
 
-       <section data-transition="none">
-          <h2>Access Levels</h2>
-          <div class="slide-pictures-container many">
-           <div class="slide-picture" style="max-width: 33%;">
-              <img class="slide-pic" src="img/django/access-levels3.png" />
-              <div class="image-caption"></div>
-           </div>
-           <div class="slide-picture">
-              <img class="slide-pic" src="img/django/django-admin1.png" />
-              <div class="image-caption">Admin Module</div>
-           </div>
-          </div>
-       </section>
+           <section data-transition="none">
+              <h2>Access Levels</h2>
+              <div class="slide-pictures-container many">
+               <div class="slide-picture" style="max-width: 33%;">
+                  <img class="slide-pic" src="img/django/access-levels3.png" />
+                  <div class="image-caption"></div>
+               </div>
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/django-admin1.png" />
+                  <div class="image-caption">Admin Module</div>
+               </div>
+              </div>
+           </section>
 
-       <section data-transition="none">
-          <h2>Access Levels</h2>
-          <div class="slide-pictures-container many">
-           <div class="slide-picture" style="max-width: 33%;">
-              <img class="slide-pic" src="img/django/access-levels3.png" />
-              <div class="image-caption"></div>
-           </div>
-           <div class="slide-picture">
-              <img class="slide-pic" src="img/django/django-admin2.png" />
-              <div class="image-caption">Admin Module</div>
-           </div>
-          </div>
-       </section>
+           <section data-transition="none">
+              <h2>Access Levels</h2>
+              <div class="slide-pictures-container many">
+               <div class="slide-picture" style="max-width: 33%;">
+                  <img class="slide-pic" src="img/django/access-levels3.png" />
+                  <div class="image-caption"></div>
+               </div>
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/django-admin2.png" />
+                  <div class="image-caption">Admin Module</div>
+               </div>
+              </div>
+           </section>
 
-       <!------------------------------------------------------
-         Viral App
-       ------------------------------------------------------->
-       <section data-transition="none">
-         <h3>Viral App - Customer View</h3>
-         <div class="slide-pictures-container inbetween2">
-           <div class="slide-picture">
-              <img class="slide-pic" src="img/django/viral3.png" />
-              <div class="image-caption">Login Page</div>
-           </div>
-           <div class="slide-picture">
-              <img class="slide-pic" src="img/django/form.png" />
-              <div class="image-caption">Request Form</div>
-           </div>
-           <div class="slide-picture">
-              <img class="slide-pic" src="img/django/cart.png" />
-              <div class="image-caption">Cart</div>
-           </div>
-           <div class="slide-picture">
-              <img class="slide-pic" src="img/django/viral2.png" />
-              <div class="image-caption">Userprofile Management</div>
-           </div>
-           <div class="slide-picture">
-              <img class="slide-pic" src="img/django/viral1.png" />
-              <div class="image-caption">Request Monitoring</div>
-           </div>
-         </div>
-        </section>
+           <!------------------------------------------------------
+             Viral App
+           ------------------------------------------------------->
+           <section data-transition="none">
+             <h3>Viral App - Customer View</h3>
+             <div class="slide-pictures-container inbetween2">
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/viral3.png" />
+                  <div class="image-caption">Login Page</div>
+               </div>
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/form.png" />
+                  <div class="image-caption">Request Form</div>
+               </div>
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/cart.png" />
+                  <div class="image-caption">Cart</div>
+               </div>
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/viral2.png" />
+                  <div class="image-caption">Userprofile Management</div>
+               </div>
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/viral1.png" />
+                  <div class="image-caption">Request Monitoring</div>
+               </div>
+             </div>
+            </section>
 
-       <section data-transition="none">
-         <h3>Viral App - Management</h3>
-         <div class="slide-pictures-container inbetween2">
-           <div class="slide-picture">
-              <img class="slide-pic" src="img/django/dashboard.png" />
-              <div class="image-caption">Dashboard</div>
-           </div>
-           <div class="slide-picture">
-              <img class="slide-pic" src="img/django/mgmt2.png" />
-              <div class="image-caption">Details View</div>
-           </div>
-           <div class="slide-picture">
-              <img class="slide-pic" src="img/django/mgmt3.png" />
-              <div class="image-caption">Worksheets</div>
-           </div>
-           <div class="slide-picture">
-              <img class="slide-pic" src="img/django/mgmt4.png" />
-              <div class="image-caption">Batch Scheduling</div>
-           </div>
-           <div class="slide-picture">
-              <img class="slide-pic" src="img/django/mgmt5.png" />
-             <div class="image-caption">Filters and Search</div>
-           </div>
-           <div class="slide-picture">
-              <img class="slide-pic" src="img/django/admin.png" />
-              <div class="image-caption">Admin Interface</div>
-           </div>
-         </div>
-        </section>
+           <section data-transition="none">
+             <h3>Viral App - Management</h3>
+             <div class="slide-pictures-container inbetween2">
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/dashboard.png" />
+                  <div class="image-caption">Dashboard</div>
+               </div>
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/mgmt2.png" />
+                  <div class="image-caption">Details View</div>
+               </div>
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/mgmt3.png" />
+                  <div class="image-caption">Worksheets</div>
+               </div>
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/mgmt4.png" />
+                  <div class="image-caption">Batch Scheduling</div>
+               </div>
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/mgmt5.png" />
+                 <div class="image-caption">Filters and Search</div>
+               </div>
+               <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/admin.png" />
+                  <div class="image-caption">Admin Interface</div>
+               </div>
+             </div>
+            </section>
 
 
-       <!------------------------------------------------------
-         Project Overview - 1
-       ------------------------------------------------------->
+           <!------------------------------------------------------
+             Project Overview - 1
+           ------------------------------------------------------->
 
-       <section>
-         <h3>Project Timeline</h3>
-         <div class="slide-pictures-container manymany">
-           <div class="slide-picture">
-                <img class="slide-pic" src="img/django/project.png" />
-           </div>
-         </div>
-         <div class="slide-pictures-container many">
-           <div class="slide-picture">
-             <ul>
-               <li class="fragment">Sept 2018
-                 <ul>
-                   <li>Inherit Project</li>
-                   <li>Goal: Finish and go-live</li>
-                 </ul>
-               </li>
-             </ul>
-           </div>
-           <div class="slide-picture">
-             <ul>
-               <li class="fragment">Jan 2019
-                 <ul>
-                   <li>Requirements meeting</li>
-                   <li>Components crucial for<br/> the app to be usable</li>
-                   <li>Come up with priorities</li>
-                 </ul>
-              </li>
-             </ul>
-           </div>
-           <br />
-           <div style="visibility: hidden;">
-             <span class="highlight-red">Customer experience is most important!</span>
-           </div>
-         </div>
-       </section>
-
-       <section>
-         <h3>Project Timeline</h3>
-         <div class="slide-pictures-container manymany">
-           <div class="slide-picture">
-                <img class="slide-pic" src="img/django/project.png" />
-           </div>
-         </div>
-         <div class="slide-pictures-container many">
-           <div class="slide-picture">
-             <ul>
-               <li>Sept 2018
-                 <ul>
-                   <li>Inherit Project</li>
-                   <li>Goal: Finish and go-live</li>
-                 </ul>
-               </li>
-             </ul>
-           </div>
-           <div class="slide-picture">
-             <ul>
-               <li>Jan 2019
-                 <ul>
-                   <li>Requirements meeting</li>
-                   <li>Components crucial for<br/> the app to be usable</li>
-                   <li>Come up with priorities</li>
-                 </ul>
-              </li>
-             </ul>
-           </div>
-           <br />
-           <div>
-             <span class="highlight-red">Customer experience is most important!</span>
-           </div>
-         </div>
-       </section>
-
-       <section>
-         <h3>Project Timeline</h3>
-         <div class="slide-pictures-container manymany">
-           <div class="slide-picture">
-                <img class="slide-pic" src="img/django/project.png" />
-           </div>
-         </div>
-         <div class="slide-pictures-container many">
-           <div class="slide-picture">
-             <ul>
-               <li>April 2019
-                 <ul>
-                   <li>App went life</li>
-                   <li>Internal and external testing
-                   <li>logged in as the customer<br/> and try to enter requests</li>
-                 </ul>
-               </li>
-             </ul>
-           </div>
-           <div class="slide-picture">
-             <ul>
-               <li class="fragment">August 20th 2019
-                 <ul>
-                   <li>App being rolled out</li>
-                   <li>Complete reload of data from <br/>Excel spreadsheets, not the &Delta;</li>
-                 </ul>
-               </li>
-             </ul>
-           </div>
-           <br />
-           <div style="visibility: hidden;">
-             <span class="highlight-red">Customer experience is most important!</span>
-           </div>
-         </div>
-       </section>
-
-       <section>
-         <h3>Project Timeline</h3>
-         <div class="slide-pictures-container manymany">
-           <div class="slide-picture">
-                <img class="slide-pic" src="img/django/project.png" />
-           </div>
-         </div>
-         <div class="slide-pictures-container many">
-           <div class="slide-picture">
-             <ul>
-               <li>Aug 20th - Sept 30th
-                 <ul>
-                   <li>Stabilize the application
+           <section>
+             <h3>Project Timeline</h3>
+             <div class="slide-pictures-container manymany">
+               <div class="slide-picture">
+                    <img class="slide-pic" src="img/django/project.png" />
+               </div>
+             </div>
+             <div class="slide-pictures-container many">
+               <div class="slide-picture">
+                 <ul style="list-style: none;">
+                   <li class="fragment">Sept 2018
+                     <ul>
+                       <li>Inherit Project</li>
+                       <li>Goal: Finish and go-live</li>
+                     </ul>
                    </li>
                  </ul>
-              </li>
-             </ul>
-           </div>
-           <div class="slide-picture">
-             <ul>
-               <li>October 2019
-                 <ul>
-                   <li>AAV requests can be entered,<br/> monitored and processed</li>
-                   <li class="highlight-red">Project is Done!</li>
+               </div>
+               <div class="slide-picture">
+                 <ul style="list-style: none;">
+                   <li class="fragment">Jan 2019
+                     <ul>
+                       <li>Requirements meeting</li>
+                       <li>Components crucial for<br/> the app to be usable</li>
+                       <li>Come up with priorities</li>
+                     </ul>
+                  </li>
                  </ul>
-              </li>
-             </ul>
-           </div>
-           <br />
-           <div style="visibility: hidden;">
-             <span class="highlight-red">Customer experience is most important!</span>
-           </div>
-         </div>
-       </section>
+               </div>
+               <br />
+               <div style="visibility: hidden;">
+                 <span class="highlight-red">Customer experience is most important!</span>
+               </div>
+             </div>
+           </section>
 
-       <section>
-         <h3>Project Timeline</h3>
-         <div class="slide-pictures-container manymany">
-           <div class="slide-picture">
-                <img class="slide-pic" src="img/django/project.png" />
-           </div>
-         </div>
-         <div class="slide-pictures-container many">
-           <div class="slide-picture">
-             <ul>
-               <li>Since October 2019
-                 <ul>
-                   <li>Application Support
+           <section>
+             <h3>Project Timeline</h3>
+             <div class="slide-pictures-container manymany">
+               <div class="slide-picture">
+                    <img class="slide-pic" src="img/django/project.png" />
+               </div>
+             </div>
+             <div class="slide-pictures-container many">
+               <div class="slide-picture">
+                 <ul style="list-style: none;">
+                   <li>Sept 2018
+                     <ul>
+                       <li>Inherit Project</li>
+                       <li>Goal: Finish and go-live</li>
+                     </ul>
                    </li>
                  </ul>
-              </li>
-             </ul>
-           </div>
-           <br />
-           <div style="visibility: hidden;">
-             <span class="highlight-red">Customer experience is most important!</span>
-           </div>
+               </div>
+               <div class="slide-picture">
+                 <ul style="list-style: none;">
+                   <li>Jan 2019
+                     <ul>
+                       <li>Requirements meeting</li>
+                       <li>Components crucial for<br/> the app to be usable</li>
+                       <li>Come up with priorities</li>
+                     </ul>
+                  </li>
+                 </ul>
+               </div>
+               <br />
+               <div>
+                 <span class="highlight-red">Customer experience is most important!</span>
+               </div>
+             </div>
+           </section>
+
+           <section>
+             <h3>Project Timeline</h3>
+             <div class="slide-pictures-container manymany">
+               <div class="slide-picture">
+                    <img class="slide-pic" src="img/django/project.png" />
+               </div>
+             </div>
+             <div class="slide-pictures-container many">
+               <div class="slide-picture">
+                 <ul style="list-style: none;">
+                   <li>April 2019
+                     <ul>
+                       <li>App went life</li>
+                       <li>Internal and external testing
+                       <li>logged in as the customer<br/> and try to enter requests</li>
+                     </ul>
+                   </li>
+                 </ul>
+               </div>
+               <div class="slide-picture">
+                 <ul style="list-style: none;">
+                   <li class="fragment">August 20th 2019
+                     <ul>
+                       <li>App being rolled out:
+                         <ul>
+                           <li>Notify customers</li>
+                            <li>Disable current Cognito form</li>
+                            <li>Set Excel spreadsheets to<br/> readonly</li>
+                            <li>Complete reload of data from <br/>spreadsheets, no &Delta;</li>
+                         </ul>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </div>
+               <br />
+               <div style="visibility: hidden;">
+                 <span class="highlight-red">Customer experience is most important!</span>
+               </div>
+             </div>
+           </section>
+
+           <section>
+             <h3>Project Timeline</h3>
+             <div class="slide-pictures-container manymany">
+               <div class="slide-picture">
+                    <img class="slide-pic" src="img/django/project.png" />
+               </div>
+             </div>
+             <div class="slide-pictures-container many">
+               <div class="slide-picture">
+                 <ul style="list-style: none;">
+                   <li>Aug 20th - Sept 30th
+                     <ul>
+                       <li>Stabilize the application
+                       </li>
+                     </ul>
+                  </li>
+                 </ul>
+               </div>
+               <div class="slide-picture">
+                 <ul style="list-style: none;">
+                   <li>October 2019
+                     <ul>
+                       <li>AAV requests can be entered,<br/> monitored and processed</li>
+                       <li class="highlight-red">Project is Done!</li>
+                     </ul>
+                  </li>
+                 </ul>
+               </div>
+               <br />
+               <div style="visibility: hidden;">
+                 <span class="highlight-red">Customer experience is most important!</span>
+               </div>
+             </div>
+           </section>
+
+           <section>
+             <h3>Project Timeline</h3>
+             <div class="slide-pictures-container manymany">
+               <div class="slide-picture">
+                    <img class="slide-pic" src="img/django/project.png" />
+               </div>
+             </div>
+             <div class="slide-pictures-container many">
+               <div class="slide-picture">
+                 <ul style="list-style: none;">
+                   <li>Since October 2019
+                     <ul>
+                       <li>Application Support
+                       </li>
+                     </ul>
+                  </li>
+                 </ul>
+               </div>
+               <br />
+               <div style="visibility: hidden;">
+                 <span class="highlight-red">Customer experience is most important!</span>
+               </div>
+             </div>
+           </section>
+
+
+
+           <!------------------------------------------------------
+             Challenges
+           -----------------------  -------------------------------->
+           <section>
+             <h2>Challenges</h2>
+           </section>
+
+           <section>
+             <h3>Historical vs. App Data</h3>
+             <div class="slide-pictures-container few">
+                <div class="slide-picture">
+                   <img class="slide-pic" src="img/django/er.png" />
+                </div>
+               <div class="slide-picture">
+                  <ul>
+                    <li>Shelf</li>
+                    <li>Rack</li>
+                    <li>Freezer</li>
+                    <li>Slot</li><br/>
+                    <li>Address</li>
+                    <li>UserProfile</li><br/>
+                    <li>Batch</li><br/>
+                    <li>Tube History</li><br/>
+                  </ul>
+                </div>
+            </div>
+           </section>
+
+           <section>
+             <h3>Historical vs. App Data</h3>
+             <div class="slide-pictures-container few">
+                <div class="slide-picture">
+                   <img class="slide-pic" src="img/django/er-copy.png" />
+                </div>
+                <div class="slide-picture">
+                  <ul>
+                    <li>Shelf</li>
+                    <li>Rack</li>
+                    <li>Freezer</li>
+                    <li>Slot</li><br/>
+                    <li>Address</li>
+                    <li>UserProfile</li><br/>
+                    <li>Batch</li><br/>
+                    <li>Tube History</li><br/>
+                  </ul>
+                </div>
+            </div>
+           </section>
+
+           <section>
+             <h3>Historical vs. App Data</h3>
+             <h4>User Profile</h4>
+             <div class="slide-pictures-container few">
+                <div class="slide-picture">
+                   <img class="slide-pic" src="img/django/history1.png" />
+                </div>
+            </div>
+           </section>
+
+           <section>
+             <h3>Historical vs. App Data</h3>
+             <h4>Created Date</h4>
+             <div class="slide-pictures-container few">
+                <div class="slide-picture">
+                   <img class="slide-pic" src="img/django/history3.png" />
+                </div>
+            </div>
+           </section>
+
+           <section>
+             <h3>Transition Project</h3>
+           </section>
+
+           <!------------------------------------------------------
+             Acknowledgements
+           ------------------------------------------------------->
+
+           <section>
+             <h3>Acknowledgements</h3>
+             <div class="slide-pictures-container mostmost">
+                <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/kim.jpg" /><br />
+                  <div class="image-caption">Kim Ritola</div>
+                </div>
+                <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/hyunah.jpg" />
+                  <div class="image-caption">Hyuan Ah Yi</div>
+                </div>
+                <div class="slide-picture">
+                  <img class="slide-pic" src="img/django/renae.jpg" />
+                  <div class="image-caption">Renae Preston</div>
+                </div>
+                <div class="slide-picture">
+                   <img class="slide-pic" src="img/django/alina.png" />
+                   <div class="image-caption">Alina Gutu</div>
+                </div>
+                <div class="slide-picture">
+                   <img class="slide-pic" src="img/django/teri.jpg" />
+                   <div class="image-caption">Teri Ngo</div>
+                </div>
+             </div>
+             <div class="slide-pictures-container mostmost">
+                <div class="slide-picture">
+                   <img class="slide-pic" src="img/django/wendye.jpg" />
+                   <div class="image-caption">Wendye Quaye</div>
+                </div>
+                <div class="slide-picture">
+                   <img class="slide-pic" src="img/django/sean.jpeg" />
+                   <div class="image-caption">Sean Murphy</div>
+                </div>
+                <div class="slide-picture">
+                   <img class="slide-pic" src="img/django/jody.jpg" />
+                   <div class="image-caption">Jody Clements</div>
+                </div>
+               <div class="slide-picture">
+                   <img class="slide-pic" src="img/django/rob.jpg" />
+                   <div class="image-caption">Rob Svirskas</div>
+               </div>
+               <div class="slide-picture">
+                   <img class="slide-pic" src="img/django/tom.jpg" />
+                   <div class="image-caption">Tom Dolafi</div>
+               </div>
+               <div class="slide-picture">
+                   <img class="slide-pic" src="img/django/konrad.jpg" />
+                   <div class="image-caption">Konrad Rokicki</div>
+               </div>
+            </div>
+           </section>
+
+           <!------------------------------------------------------
+             Django
+           ------------------------------------------------------->
+           <section>
+             <h3>Django</h3>
+             <div class="slide-pictures-container many">
+               <div class="slide-picture">
+                 <ul>
+                   <li>MVC / MTV</li>
+                   <li>Jinja</li>
+                   <li>ORM and QuerySet</li>
+                   <li>Signals</li>
+                   <li>Commands</li>
+                   <li>Regular Expressions</li>
+                   <li>Reusability</li>
+                 </ul>
+               </div>
+               <div class="slide-picture">
+                 <img class="slide-pic" src="img/django/djangocon3-queryset.jpg" />
+               </div>
+             </div>
+           </section>
+
+           <section>
+             <h3>Workday Integration</h3>
+             <a href="http://config.int.janelia.org/config/cost_centers">http://config.int.janelia.org/config/cost_centers</a>
+             <a href="http://config.int.janelia.org/config/workday">http://config.int.janelia.org/config/workday</a>
+           </section>
+
+
+           <!------------------------------------------------------
+             Open Source
+           ------------------------------------------------------->
+
+           <section>
+             <h2>Open Source</h2>
+             <div class="slide-pictures-container few">
+               <img class="slide-pic" src="img/django/djangocon-1.jpg" />
+             </div>
+           </section>
+
+           <section>
+             <h3>World of Open Source</h3>
+             <div class="slide-pictures-container stillmany">
+                <div class="slide-picture">
+                   <img class="slide-pic" src="img/django/opensource.png" />
+                   <div class="image-caption">Mailing list / Discussion groups</div>
+                </div>
+                <div class="slide-picture">
+                   <img class="slide-pic" src="img/django/djangochat.png" />
+                   <div class="image-caption">Django Chat Podcast</div>
+                </div>
+                <div class="slide-picture">
+                   <img class="slide-pic" src="img/django/djangocon.png" />
+                   <div class="image-caption">DjangoCon Conference -- all talks free online</div>
+                </div>
+                <div class="slide-picture">
+                   <img class="slide-pic" src="img/django/os-django.png" />
+                   <div class="image-caption">Issue Tracker</div>
+                </div>
+                <div class="slide-picture">
+                   <img class="slide-pic" src="img/django/os-django2.png" />
+                   <div class="image-caption">Open Tickets</div>
+                </div>
+               <div class="slide-picture">
+                   <img class="slide-pic" src="img/django/carlton.png" />
+                   <div class="image-caption">Carlton Gibson</div>
+                </div>
+            </div>
+           </section>
+
+           <section>
+             <h3>Open-Source Viral App</h3>
+             <a href="https://github.com/JaneliaSciComp/VirusServices">https://github.com/JaneliaSciComp/VirusServices</a>
+           </section>
+
+           <!------------------------------------------------------
+             Outlook
+           ------------------------------------------------------->
+            <section data-transition="none">
+              <h2>Future Work</h2>
+              <ol>
+               <li class="fragment">Phase II
+                 <ul>
+                     <li>Include more Virus Types</li>
+                     <li>Upgrade Language / Framework</li>
+                 </ul>
+               </li>
+               <li class="fragment">
+                 Generalize --> Janelia Shopping App
+               </li>
+               <li class="fragment">Look at products built on top of Django
+                  <ul>
+                     <li>Wagtail</li>
+                     <li>Django CMS</li>
+                  </ul>
+               </li>
+             </ol>
+           </section>
+
          </div>
-       </section>
+      </div>
+      <script src="lib/js/head.min.js"></script>
+      <script src="js/reveal.js"></script>
 
+      <script>
+         // More info about config & dependencies:
+         // - https://github.com/hakimel/reveal.js#configuration
+         // - https://github.com/hakimel/reveal.js#dependencies
+         Reveal.initialize(
+             {
+                dependencies: [
+                   {src: 'plugin/markdown/marked.js'},
+                   {src: 'plugin/markdown/markdown.js'},
+                   {src: 'plugin/notes/notes.js', async: true},
+                   {
+                      src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                      hljs.initHighlightingOnLoad();
+                   }
+                   }
+                ],
+                slideNumber: true,
+                transition: 'none',
+                previewLinks: false,
+                controls: true,
+                progress: true,
+                history: true,
 
-
-       <!------------------------------------------------------
-         Challenges
-       -----------------------  -------------------------------->
-       <section>
-         <h2>Challenges</h2>
-       </section>
-
-       <section>
-         <h3>Historical vs. App Data</h3>
-         <div class="slide-pictures-container few">
-            <div class="slide-picture">
-               <img class="slide-pic" src="img/django/er.png" />
-            </div>
-        </div>
-       </section>
-
-       <section>
-         <h3>Historical vs. App Data</h3>
-         <div class="slide-pictures-container few">
-            <div class="slide-picture">
-               <img class="slide-pic" src="img/django/er.png" />
-            </div>
-        </div>
-       </section>
-
-       <section>
-         <h3>Historical vs. App Data</h3>
-         <h4>Created Date</h4>
-         <div class="slide-pictures-container few">
-            <div class="slide-picture">
-               <img class="slide-pic" src="img/django/history3.png" />
-            </div>
-        </div>
-       </section>
-
-       <section>
-         <h3>Historical vs. App Data</h3>
-         <h4>User Profile</h4>
-         <div class="slide-pictures-container few">
-            <div class="slide-picture">
-               <img class="slide-pic" src="img/django/history1.png" />
-            </div>
-        </div>
-       </section>
-
-       <section>
-         <h3>Transition Project</h3>
-       </section>
-
-       <!------------------------------------------------------
-         Acknowledgements
-       ------------------------------------------------------->
-
-       <section>
-         <h3>Acknowledgements</h3>
-         <div class="slide-pictures-container mostmost">
-            <div class="slide-picture">
-              <img class="slide-pic" src="img/django/kim.jpg" /><br />
-              <div class="image-caption">Kim Ritola</div>
-            </div>
-            <div class="slide-picture">
-              <img class="slide-pic" src="img/django/hyunah.jpg" />
-              <div class="image-caption">Hyuan Ah Yi</div>
-            </div>
-            <div class="slide-picture">
-              <img class="slide-pic" src="img/django/renae.jpg" />
-              <div class="image-caption">Renae Preston</div>
-            </div>
-            <div class="slide-picture">
-               <img class="slide-pic" src="img/django/alina.png" />
-               <div class="image-caption">Alina Gutu</div>
-            </div>
-            <div class="slide-picture">
-               <img class="slide-pic" src="img/django/teri.jpg" />
-               <div class="image-caption">Teri Ngo</div>
-            </div>
-         </div>
-         <div class="slide-pictures-container mostmost">
-            <div class="slide-picture">
-               <img class="slide-pic" src="img/django/wendye.jpg" />
-               <div class="image-caption">Wendye Quaye</div>
-            </div>
-            <div class="slide-picture">
-               <img class="slide-pic" src="img/django/sean.jpeg" />
-               <div class="image-caption">Sean Murphy</div>
-            </div>
-            <div class="slide-picture">
-               <img class="slide-pic" src="img/django/jody.jpg" />
-               <div class="image-caption">Jody Clements</div>
-            </div>
-           <div class="slide-picture">
-               <img class="slide-pic" src="img/django/rob.jpg" />
-               <div class="image-caption">Rob Svirskas</div>
-           </div>
-           <div class="slide-picture">
-               <img class="slide-pic" src="img/django/tom.jpg" />
-               <div class="image-caption">Tom Dolafi</div>
-           </div>
-           <div class="slide-picture">
-               <img class="slide-pic" src="img/django/konrad.jpg" />
-               <div class="image-caption">Konrad Rokicki</div>
-           </div>
-        </div>
-       </section>
-
-       <!------------------------------------------------------
-         Django
-       ------------------------------------------------------->
-
-
-
-       <!------------------------------------------------------
-         Open Source
-       ------------------------------------------------------->
-
-       <section>
-         <h1>Why</h1>
-         <h2>Open Source ?</h2>
-       </section>
-
-       <section>
-         <h3>World of Open Source</h3>
-         <div class="slide-pictures-container stillmany">
-            <div class="slide-picture">
-               <img class="slide-pic" src="img/django/opensource.png" />
-               <div class="image-caption">Mailing list / Discussion groups</div>
-            </div>
-            <div class="slide-picture">
-               <img class="slide-pic" src="img/django/djangochat.png" />
-               <div class="image-caption">Django Chat Podcast</div>
-            </div>
-            <div class="slide-picture">
-               <img class="slide-pic" src="img/django/djangocon.png" />
-               <div class="image-caption">DjangoCon Conference -- all talks free online</div>
-            </div>
-            <div class="slide-picture">
-               <img class="slide-pic" src="img/django/os-django.png" />
-               <div class="image-caption">Issue Tracker</div>
-            </div>
-            <div class="slide-picture">
-               <img class="slide-pic" src="img/django/os-django2.png" />
-               <div class="image-caption">Open Tickets</div>
-            </div>
-           <div class="slide-picture">
-               <img class="slide-pic" src="img/django/carlton.png" />
-               <div class="image-caption">Carlton Gibson</div>
-            </div>
-        </div>
-       </section>
-
-       <section>
-         <h3>Open-Source Viral App</h3>
-         <a href="https://github.com/JaneliaSciComp/VirusServices">https://github.com/JaneliaSciComp/VirusServices</a>
-       </section>
-
-       <!------------------------------------------------------
-         Outlook
-       ------------------------------------------------------->
-        <section data-transition="none">
-          <h2>Future Work</h2>
-          <ol>
-           <li class="fragment">Phase II
-             <ul>
-                 <li>Include more Virus Types</li>
-                 <li>Upgrade Language / Framework</li>
-             </ul>
-           </li>
-           <li class="fragment">
-             Generalize --> Janelia Shopping App
-           </li>
-           <li class="fragment">Look at products built on top of Django
-              <ul>
-                 <li>Wagtail</li>
-                 <li>Django CMS</li>
-              </ul>
-           </li>
-         </ol>
-       </section>
-
-     </div>
-  </div>
-  <script src="lib/js/head.min.js"></script>
-  <script src="js/reveal.js"></script>
-
-  <script>
-     // More info about config & dependencies:
-     // - https://github.com/hakimel/reveal.js#configuration
-     // - https://github.com/hakimel/reveal.js#dependencies
-     Reveal.initialize(
-         {
-            dependencies: [
-               {src: 'plugin/markdown/marked.js'},
-               {src: 'plugin/markdown/markdown.js'},
-               {src: 'plugin/notes/notes.js', async: true},
-               {
-                  src: 'plugin/highlight/highlight.js', async: true, callback: function () {
-                  hljs.initHighlightingOnLoad();
-               }
-               }
-            ],
-            slideNumber: true,
-            transition: 'none',
-            previewLinks: false,
-            controls: true,
-            progress: true,
-            history: true,
-
-         },
-     );
-  </script>
-</body>
-</html>
+             },
+         );
+      </script>
+    </body>
+    </html>
