@@ -60,6 +60,10 @@
     max-height: 170px;
 }
 
+.reveal .slide-pictures-container.mostmost img{
+    max-height: 150px;
+}
+
 .reveal .slide-icon {
     margin: auto;
     font-size: 160px;
@@ -84,8 +88,12 @@
     margin: 0;
 }
 
-.reveal .highlight-letter {
+.reveal .current-fragment.highlight-letter {
     color: #23759b;
+}
+
+.reveal .highlight-red {
+    color: #dc3545;
 }
 
 .reveal .friendly-urls {
