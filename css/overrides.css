@@ -36,6 +36,10 @@
     max-height: 480px;
 }
 
+.reveal .slide-pictures-container.less img{
+    max-height: 380px;
+}
+
 .reveal .slide-pictures-container.many img{
     max-height: 300px;
 }
